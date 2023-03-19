@@ -1,0 +1,22 @@
+\contentsline {section}{\numberline {1}Agents}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Inputs to an agent}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Dimensions of Complexity}{2}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Modularity}{2}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}Planning Horizon}{3}{subsubsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.3}Representation}{3}{subsubsection.1.2.3}%
+\contentsline {subsubsection}{\numberline {1.2.4}Learning from experience}{3}{subsubsection.1.2.4}%
+\contentsline {subsubsection}{\numberline {1.2.5}Uncertainty}{3}{subsubsection.1.2.5}%
+\contentsline {subsubsection}{\numberline {1.2.6}Sensing Uncertainty}{3}{subsubsection.1.2.6}%
+\contentsline {subsubsection}{\numberline {1.2.7}Effect Uncertainty}{3}{subsubsection.1.2.7}%
+\contentsline {subsubsection}{\numberline {1.2.8}Preferences}{3}{subsubsection.1.2.8}%
+\contentsline {subsubsection}{\numberline {1.2.9}Number of Agents}{3}{subsubsection.1.2.9}%
+\contentsline {subsubsection}{\numberline {1.2.10}Interaction}{3}{subsubsection.1.2.10}%
+\contentsline {section}{\numberline {2}Representation}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Defining a solution}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Decisions and outcome}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Physical Symbol System Hypothesis}{4}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Knowledge and Symbol Levels}{4}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Agent System Architecture}{5}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Controller}{5}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Belief States}{5}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Agent Types}{7}{subsection.2.8}%

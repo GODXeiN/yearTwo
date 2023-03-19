@@ -1,0 +1,227 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{listings}
+\usepackage{lmodern}
+\usepackage{amsfonts}
+\usepackage{titling}
+\usepackage{lipsum}
+\usepackage[left=1in, right=1in, bottom=1in, top=1in]{geometry}
+\usepackage{amsthm}
+\usepackage{tcolorbox}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{makeidx}
+\usepackage{tikz}
+\usepackage{cases}
+\usepackage{apacite}
+\usepackage{tkz-berge}
+\usepackage{url}
+\usepackage{tgtermes}
+\usepackage{sectsty}
+\usepackage{subcaption}
+\usepackage{setspace}
+\usepackage{float}
+\usepackage{amsmath, amssymb}
+
+
+% figure support
+\usepackage{import}
+\usepackage{xifthen}
+\pdfminorversion=7
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{color}
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+%mathstyling
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem*{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+\newtheorem{conj}{Conjecture}[section]
+\newtheorem{exmp}{Example}[section]
+\newtheorem{axiom}{Axiom}
+\theoremstyle{remark}
+\newtheorem*{rem}{Remark}
+\newtheorem*{note}{Note}
+
+\definecolor{darkgreen}{rgb}{0.0, 0.5, 0.0}
+
+\pdfsuppresswarningpagegroup=1
+\lstset{
+tabsize = 4, %% set tab space width
+showstringspaces = false, %% prevent space marking in strings, string is defined as the text that is generally printed directly to the console
+numbers = left, %% display line numbers on the left
+commentstyle = \color{darkgreen}, %% set comment color
+keywordstyle = \color{blue}, %% set keyword color
+stringstyle = \color{red}, %% set string color
+rulecolor = \color{black}, %% set frame color to avoid being affected by text color
+basicstyle = \small \ttfamily , %% set listing font and size
+breaklines = true, %% enable line breaking
+numberstyle = \tiny,
+  frame=none,
+  xleftmargin=2pt,
+  stepnumber=1,
+  belowcaptionskip=\bigskipamount,
+  captionpos=b,
+  escapeinside={*'}{'*},
+  language=haskell,
+  tabsize=2,
+  emphstyle={\bf},
+  showspaces=false,
+  columns=flexible,
+  showstringspaces=false,
+  morecomment=[l]\%,
+}
+\begin{document}
+	\begin{titlepage}
+	\begin{center}
+	\large
+	University of Warwick \\
+	Department of Computer Science \\
+	\huge
+	\vspace{50mm}
+	\rule{\linewidth}{0.5pt} \\
+	CS255 \\
+	\vspace{5mm}
+	\Large
+	Formal Languages
+	\rule{\linewidth}{0.5pt}
+	\vspace{5mm}
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\textwidth]{crest_black.eps}
+	\end{figure}
+	\vspace{37mm}
+	Cem Yilmaz \\
+	\today
+	\end{center}
+	\end{titlepage}
+	\tableofcontents
+	\newpage
+	\section{Languages}
+	\subsection{Alphabet}
+	\begin{tcolorbox}[colback=black!3!white,colframe=black!60!white,title=\begin{defn}Alphabet \label{Alphabet}\end{defn}]
+	Alphabet is a non-empty finite set of symbols. For example,
+	\begin{align}
+		\Sigma_1 = \{a,b,c\} \;\;\;\;\;\;\;\;\;\;\;\;\; \Sigma_2 = \{5,8,10\}
+	\end{align}
+	Are alphabets which contain those symbols.
+	\end{tcolorbox}
+	\begin{tcolorbox}[colback=black!3!white,colframe=0black!60!white,title=\begin{defn}Language \label{Language}\end{defn}]
+	Language is a potentially infinite set of finite strings over an alphabet. Using our previous alphabets, for example, we could obtain
+	\begin{align}
+	L_1 = \{ab,abc,aaab,ccc,ba\} \;\;\;\;\;\;\;\;\;\; L_2 = \{ a,aa,aaa,aaaa,\ldots\}
+	\end{align}
+	We could further define
+	\begin{align}
+		\Sigma^{*} = \{\text{ALL finite strings (also called words) over the alphabet }\Sigma\}
+	\end{align}
+	\end{tcolorbox}
+	\subsection{Deterministic Final State Automata}
+	
+	\begin{tcolorbox}[colback=black!3!white,colframe=black!60!white,title=\begin{defn}Deterministic Finate State Automaton \label{Deterministic Finate State Automaton}\end{defn}]
+	A machine $M$ defined by the tuple
+	\begin{align}
+	M = (Q,\Sigma,q_0,F,\delta)
+	\end{align}
+	is called the deterministic finite state automaton or a deterministic finite state machine. The $Q$ refers to states, $\Sigma$ to the alphabet,  $q_0$ to the initial/starting state, $F$ to the final state and $\delta$ as the state transition.
+	\end{tcolorbox}
+	To represent a deterministic finite state automaton, consider the following diagram:
+\begin{figure}[H]
+    \centering
+    \incfig{dfa}
+    \caption{Exemplar deterministic finite state automata state diagram}
+    \label{fig:dfa}
+\end{figure}
+Which represents the following table of values:
+\begin{table}[H]
+	\centering
+	\caption{State Transition Table}
+	\label{tab:label}
+	\begin{tabular}{|c||c|c|c|}
+		\hline
+		\delta & $a$ & $b$ & $c$ \\
+		\hline
+		\hline
+		$q_0$ & $q_1$ & $q_2$ & $q_2$ \\
+		\hline
+		$q_1$ & $q_1$ & $q_3$ & $q_3 $ \\
+		\hline
+		$q_2$ & $q_2$ & $q_2$ & $q_2$ \\
+		\hline
+		$q_3$ & $q_3$ & $q_3$ & $ q_3$ \\
+		\hline
+	\end{tabular}
+\end{table}
+In other words, if the input string finishes at $q_1$, we accept the input. If it finishes in any other node otherwise, reject.
+\begin{tcolorbox}[colback=black!3!white,colframe=black!60!white,title=\begin{defn}The Empty Word \label{The Empty Word}\end{defn}]
+The length of $|\varepsilon| = 0$. The Language $L_1$ is the empty language, $L_2 = \{ \varepsilon\}$ is a non-empty language. Note that $\Sigma^{*}$ always contains $\varepsilon$. The role that of the empty string is to be a monoid in our system.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=black!3!white,colframe=black!60!white,title=\begin{defn}Monoid \label{Monoid}\end{defn}]
+Comprise of a set, an associative binary operation on the set with an identity element.
+\begin{align}
+	(\mathbb{N}_0, + ,0) & \text{ is a monoid. Here, $+$ denotes addition.} \\
+	(\mathbb{N},\times ,1) &\text{ is a monoid. Here, $\times $ is multiplication.}\\
+	(\Sigma^{*},\circ,\varepsilon) & \text{ is a monoid. Here, $\circ$ denotes string concatenation.}
+\end{align}
+\end{tcolorbox}
+\begin{tcolorbox}[colback=black!3!white,colframe=black!60!white,title=\begin{defn}Transition Function \label{Transition Function}\end{defn}]
+The transition function is denoted as
+\begin{align}
+\delta(q_i,\text{string}) = q_j
+\end{align}k
+In other words, we take a state $q_i$, a string input, and after running the string, we get output state $q_j$. Note that the string can be a single letter or a bigger string. In case of a non-letter string, sometimes the $\delta$ is denoted as $\hat{\delta}$ instead. Formally,
+\begin{align}
+	\hat{\delta}:Q\times \Sigma^{*} \to Q	
+\end{align}
+such that
+\begin{align}
+	&\forall q \in Q, \hat{\delta}(q,\varepsilon) = q \\
+	&\forall q \in Q \land s \in \Sigma^{*} \text{ s.t. } s = wa \text{ for some } w \in \Sigma^{*} \land a \in \Sigma, \hat{\delta}(q,s) = \delta(\hat{\delta}(q,w),a)
+\end{align}
+\end{tcolorbox}
+\begin{tcolorbox}[colback=black!3!white,colframe=black!60!white,title=\begin{defn}Language accepted by DFA \label{Language accepted by DFA}\end{defn}]
+Consider a DFA $M = (Q,\Sigma,q_0,F,\delta)$. The language accepted or recognised by $M$ is denoted by $L(M)$ and is defined as
+\begin{align}
+L(M) = \{ s \in \Sigma^{*} | \hat{\delta}(q_0,s) \in F \}
+\end{align}
+\end{tcolorbox}
+\begin{tcolorbox}[colback=black!3!white,colframe=black!60!white,title=\begin{defn}Run of a DFA \label{Run of a DFA}\end{defn}]
+Consider a DFA  $m = (Q,\Sigma,q_0,F,\delta).$ Consider a string $s=s_1s_2\ldots s_n$, where $s_i \in \Sigma$ for each $i \in [n]$. The run of $M$ on the empty word $\varepsilon$ is just the state $q_0$. The run of $M$ on the word $s$ is a sequence of states $r_0,r_1,\ldots,r_n$, where
+\begin{align}
+	r_0&=q_0 \\
+\forall i \in [n],r_i &= \delta(r_{i-1},s_i)
+\end{align}
+\end{tcolorbox}
+\subsection{Languages}
+\begin{tcolorbox}[colback=black!3!white,colframe=black!60!white,title=\begin{defn}Regular Language \label{Regular Language}\end{defn}]
+A language $L$ is called regular if it is accepted by some deterministic finite state automata (DFA)
+\end{tcolorbox}
+\begin{tcolorbox}[colback=black!3!white,colframe=black!60!white,title=\begin{defn}NFA \label{NFA}\end{defn}]
+Formally, the extended transition $\hat{\delta}$ for an NFA ($Q,\Sigma,q_0,F,\delta)$ is a function $\hat{\delta}: Q \times \Sigma^{*} \to \mathbb{P}(Q)$ and is defined as follows:
+\begin{align}
+	\forall q \in Q, \hat{\delta}(q,\varepsilon) &= ECLOSE(q) \\
+\forall q \in Q \land s \in \Sigma^{*} : s&=wa \text{ for some } w \in \Sigma^{*} \land a \in \Sigma, \hat{\delta}(q,s) = ECLOSE(\cup_{q'\in \hat{\delta}(q,w)} \delta(q',a))
+\end{align}
+It is useful to first compute the $\varepsilon$ closure of an input and then consider the input string to see where it possible leads, repeating the process.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=black!3!white,colframe=black!60!white,title=\begin{cor}Language of NFA \label{Language of NFA}\end{cor}]
+        Consider an NFA $M = (Q,\Sigma,q_0,F,\delta)$. The run of $M$ on the word $s$ is a sequence of states $r_0,r_1,\ldots,r_n$ such that
+                \begin{align}
+			r_0 &= q_0 \\
+			\exists s_1,s_2,\ldots,s_n \in \Sigma& \cup \{\varepsilon\} \text{ such that } s = s_1s_2\ldots s_n \land \forall i \in [n], r_i \in \delta(r_{i-1}) \in \delta(r_{i-1},s_i)
+                \end{align}
+\end{tcolorbox}
+\end{document}

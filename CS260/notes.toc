@@ -1,0 +1,40 @@
+\contentsline {section}{\numberline {1}Revision}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Past Paper}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Books}{2}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Greedy Algorithms}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Greedy Rules}{2}{subsection.2.1}%
+\contentsline {section}{\numberline {3}Interval Scheduling}{2}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Algorithm Correctness}{3}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Implementation and Runtime}{3}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Interval Partitioning / Coloring}{3}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Implementation and Runtime}{4}{subsection.4.1}%
+\contentsline {section}{\numberline {5}Scheduling to minimise lateness}{4}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Implementation and Runtime}{4}{subsection.5.1}%
+\contentsline {section}{\numberline {6}Shortest Paths in a Graph}{6}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Implementation and Running Time}{6}{subsection.6.1}%
+\contentsline {section}{\numberline {7}Minimum Spanning Tree Problem}{6}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Implementation and Runtime}{7}{subsection.7.1}%
+\contentsline {section}{\numberline {8}Divide and Conquer}{8}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Mergesort}{8}{subsection.8.1}%
+\contentsline {section}{\numberline {9}Finding the closest pair of points}{8}{section.9}%
+\contentsline {section}{\numberline {10}General recurrence for Divide and Conquer algorithms that are balanced}{9}{section.10}%
+\contentsline {section}{\numberline {11}Integer Multiplication}{10}{section.11}%
+\contentsline {section}{\numberline {12}Subset Sum and Knapsack}{11}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Sub problems}{11}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2}Compute}{11}{subsection.12.2}%
+\contentsline {section}{\numberline {13}Sequence Alignment}{12}{section.13}%
+\contentsline {subsection}{\numberline {13.1}Subproblems}{12}{subsection.13.1}%
+\contentsline {subsection}{\numberline {13.2}Runtime Recurrence}{14}{subsection.13.2}%
+\contentsline {section}{\numberline {14}Revisit to Shortest Paths}{14}{section.14}%
+\contentsline {subsection}{\numberline {14.1}Subproblems}{15}{subsection.14.1}%
+\contentsline {subsection}{\numberline {14.2}Compute}{15}{subsection.14.2}%
+\contentsline {subsection}{\numberline {14.3}Bellman-Ford}{15}{subsection.14.3}%
+\contentsline {subsection}{\numberline {14.4}Finding Mincost Paths}{15}{subsection.14.4}%
+\contentsline {section}{\numberline {15}From negative cycles to sink}{16}{section.15}%
+\contentsline {section}{\numberline {16}Intractability}{16}{section.16}%
+\contentsline {section}{\numberline {17}Polynomial-Time Reduction}{16}{section.17}%
+\contentsline {section}{\numberline {18}Independent Set}{17}{section.18}%
+\contentsline {section}{\numberline {19}Vertex Cover}{17}{section.19}%
+\contentsline {section}{\numberline {20}Set Cover}{18}{section.20}%
+\contentsline {section}{\numberline {21}SAT}{18}{section.21}%
+\contentsline {subsection}{\numberline {21.1}3-SAT}{18}{subsection.21.1}%
