@@ -140,7 +140,7 @@ numberstyle = \tiny,
 	\begin{align*}
 		CUSTOMER(CUST-ID,CUST-NAME,ADDRESS,PHONENO)
 	\end{align*}
-	Each Attribute/column has a domain or a set of valid values. For example, CUST-ID is a 7 digit number. \\
+	Each Attribute/column has a domain or a set of valid values. For example, CUST-ID is a 7 digit number. More about this is discussed in section \ref{table}.\\
 	A tuple (aka row) of a relation is an ordered set of values enclosed in angled brackets $<\ldots>$. Each value is derived from an appropriate domain. For example,
 	\begin{align*}
 		<632895, "\text{PETER T.}", "\text{2 Main St. Warwick}", "(024) 894-2000">
@@ -170,7 +170,7 @@ numberstyle = \tiny,
 	The constraints include the fact that there are key constraints, entity integrity constraints and referential integrity constraints. Also there exist domain constraints, values in an attribute in a tuple must come from the domain of that attribute. Values could also be NULL if allowed. 
 	\subsection{Key Constraints}
 	Superkey of $R$ : a subset of attributes of $R$, $SK$, such that: \\
-	In any valid state for $r(R)$ : for all two distinct tuples $t_1$ and $t_2 \in r(R)$ , where $t_1[SK] \neq  t_2[SK]$, where $SK $ is the superkey. For example, let us define superkey SK 
+	In any valid state for $r(R)$ : for all two distinct tuples $t_1$ and $t_2 \in r(R)$ , where $t_1[SK] \neq  t_2[SK]$, where $SK $ is the superkey. For example, let us define superkey SK with the attributes
 	\begin{align*}
 		SK = \{\text{Country, PhoneNumber}\}
 	\end{align*}
@@ -242,10 +242,341 @@ numberstyle = \tiny,
 	We need functional dependencies as they are a formal tool that allow us derivation of 'good' DB designs (relations and their schemata). Ultimately, a good design depends on the dependencies between attributes between to be in the same relation. Assume, $X,Y,Z$ represent sets of attributes. $A,B,C$ represent single attributes. Notation $ABC$ implies $\{A,B,C\}$. $X\to Y$ is an assertion about a relation $R$ and two sets of attributes from $R$. \\
 	If $X\to Y$ the values of the $Y$ component of a tuple depend on values of the $X$ component. i.e., the values of the $X$ component of a tuple uniquely (functionally) determine those of the $Y$ component.  \\
 	So, $X \to Y$ specifies that whenever two tuples $R$ agree on values of all the attributes of $X$, they must also agree on values of attribute of $Y$. Formally, $t_1[X] = t_2[X] \to t_1[Y] = t_2[Y]$. 
-	\subsection{Subsection}
+	\subsection{Schemas}
 	A db contains one or more schemas. Each schema contains one or more tables. To Create a schema, we type
 	\begin{align*}
 		\text{CREATE SCHEMA company AUTHORIZATION 'Jsmith';}
 	\end{align*}
-	Creating a schema "company" owned by "Jsmith".
+	Creating a schema "company" owned by "Jsmith".\label{table}
+We can create tables for each schema. The command is
+\begin{align*}
+	\text{CREATE TABLE}
+\end{align*}
+which creates a relation $R$. However, we must also specify the name of the table, its attributes (columns) along with their types, and any constraints. All created tables belong in a schema and belong to a special "public" schema if no other has been created. Relations and its tuples are actually created and stored as a file by the DBMS. Virtual relations/tables which are created using VIEW do not correspond to a physical file. The attribute/constraint format for a relation $R$ is as the following:
+\begin{align*}
+	(<\text{Att1Name}><\text{Att1DataType}><\text{AttConstraints}>,<\text{AttName2}><\text{Att2DataType}><\text{AttConstraints}>,\ldots)
+\end{align*}
+\begin{exmp}
+	\begin{align*}
+		\text{CREATE TABLE } students(\text{studentID INTEGER PRIMARY KEY, studentName VARCHAR(30), courseID INTEGER});
+	\end{align*}
+
+\end{exmp}
+\subsection{Constraints}
+Some basic constraints include:
+\begin{itemize}
+	\item Key constraint: A primary key is unique
+	\item Entity integrity: a primary key value cannot be null
+	\item Referential integrity constraints: a "foreign key" must have a value that is already present as a primary key, or it may be null
+	\item Plus attribute constraints
+\end{itemize}
+Additional restrictions include NOT NULL, default value of an attribute i.e., DEFAULT$<\text{value}>$, CHECK i.e., CHECK$(\text{Age} > 0 \text{ AND Age}<125 )$, PRIMARY KEY, UNIQUE.
+The foreign key constraint, as we know, must have that it is a subset of the primary key it is referencing to. As such, with updates and deletions, we may have errors. To remedy this, we have the commands
+\begin{align*}
+	\text{ON DELETE and ON UPDATE}
+\end{align*}
+which can be paired with the commands
+\begin{align*}
+	\text{DEFAULT, CASCADE, SET NULL}
+\end{align*}
+Cascade refers to the deletion of child tables foreign keys where $FK=PK$.
+\section{Queries}
+\subsection{Basic Queries}
+A query is done using the command
+\begin{align*}
+	\text{SELECT }<\text{attribute1,}\ldots\text{attributei}> \text{ FROM } <\text{table list}> \text{ WHERE }<\text{condition}>
+\end{align*}
+One can use the special operator $*$ in the attribute which retrieves all attributes available. If there are tables with the same name, then we can specify the table and attribute by adding the table name with a dot before the attribute. For example,
+\begin{align*}
+	\text{SELECT students.studentID from students;}
+\end{align*}
+You can further alias names of tables or even attributes/columns, for example, below we will rename the table
+\begin{align*}
+	\text{SELECT s.studentID FROM students AS S;}
+\end{align*}
+which means that the name $S$ is now used for any qualification for the table name (including in WHERE clauses). The logical comparison operators that exist are:
+\begin{align*}
+	=,<,<=,>,>=, <>
+\end{align*}
+However, when using $=$ to filter by strings, it is important to put the string around $'$. One could also use
+\begin{align*}
+	\text{BETWEEN low-value AND high-value}
+\end{align*}
+When querying, SQL first uses the FROM clause and selects the table. Then, it applies WHERE to find the correct rows in the table. Finally, it applies SELECT to filter the columns/attributes. 
+\subsubsection{Ordering}
+You can further order your final result by adding
+\begin{align*}
+	\text{ORDER BY attribute(s) [ASC|DESC]}
+\end{align*}
+in the end of your query. You can also mathematical expressions within the query. You could, for example, retrieve the price in SELECT price*147 which would multiply all prices by $147$. 
+\subsubsection{Combining}
+You can further complicate and define new columns, such as
+\begin{align*}
+	\text{SELECT drinker, 'likes Earl Grey' AS whoLikesEarlGrey FROM Likes WHERE tea = 'Earl Grey';}
+\end{align*}
+This would define a new column whoLikesEarlGrey with the string 'likes Early Grey' for all rows. You could create a more sophisticated column by placing functions such as string count for the drinker name. 
+\subsection{More Complicated Queries}
+\subsubsection{String Matching}
+the WHERE clause can have conditions for strings, in which a string is compared with a pattern to see if it matches. The general form is
+\begin{align*}
+	<\text{StringAttribute}> \text{ LIKE } <\text{pattern}> \\
+	<\text{StringAttribute}> \text{ NOT LIKE } <\text{pattern}>
+\end{align*}
+The pattern is a quoted string with special characters where
+\begin{align*}
+	\% = \text{ "any string" of zero or more characters} \\
+	\_ = \text{ "any character", exactly one character}
+\end{align*}
+For example, the query
+\begin{align*}
+	\text{SELECT name FROM drinkers WHERE phone LIKE '$\% 1926 \_\_\_\_\_\_$'}
+\end{align*}
+Would create a query that finds drinkers whose phone has the dialling code $1927$. The $\%$ accommodates for possible country codes e.g. $+44,+90$ and the specific number of $\_$ ensures the length of the phone has exactly $6$ characters after $1926$.
+\subsubsection{NULL}
+We need to be able to test if a value is NULL. The syntax is as follows:
+\begin{align*}
+	<\text{Attribute}> \text{ IS (NOT) NULL}
+\end{align*}
+The (NOT) was placed to emphasise that one could place the word NOT if desired.
+\section{Database Modifications}
+\subsection{Insertion}
+\begin{align*}
+	\text{INSERT INTO }<\text{tablename}>\text{ VALUES }(<\text{val1}>,<\text{val2}>,\ldots<\text{valn}>);
+\end{align*}
+Each list refers to a record (tuple) being inserted. Each value belongs to the attribute of the same position in the attribute list of the schema. You can also insert partial records by specifying which attributes you would like to insert. That is,
+\begin{align*}
+	\text{INSERT INTO }<\text{tablename}> <\text{A1,}\ldots,\text{Aj}>\text{ VALUES }(<\text{val1}>,<\text{val2}>,\ldots<\text{valn}>);
+\end{align*}
+where $<\text{A1},\ldots,\text{Aj}>$ is a partial attribute list
+\subsection{Deletion}
+\begin{align*}
+	\text{DELETE FROM }<\text{tableName}> \text{ WHERE } <\text{expression}>;
+\end{align*}
+For example,
+\begin{align*}
+	\text{DELETE FROM students WHERE studentID}=2000;
+\end{align*}
+would delete the student with the studentID $2000$. Note that it has to pass referential integrity checks.
+\subsection{Updating}
+\begin{align*}
+	\text{UPDATE } <\text{relation}> \text{ SET }<\text{list of (attribute assignment) pairs}> \text{ WHERE } <\text{condition on tuples}>;
+\end{align*}
+For example,
+\begin{align*}
+	\text{UPDATE drinkers SET phone}='09126-554555'\text{ WHERE name = 'Peter'};
+\end{align*}
+\section{Programming DB}
+\subsection{JDBC: Java Data Base Connectivity}
+The JDBC is an API that calls SQL commands from Java. It is implemented as a driver for a particular DBMS with methods, objects and classes. One Java program can have connections to several databases and possibly even connected to different DBMSs. These are called data sources. \\
+
+\noindent The driver manager class is used to handle multiple connections to different DBs i.e., managing their drivers, and mapping clients to right drivers. The methods include, but are not limited to:
+\begin{itemize}
+	\item getDriver
+	\item registerDriver
+	\item deregisterDriver
+\end{itemize}
+There are several driver types for different types of support and we mostly refer to type $4$ drivers, which are pure Java driver for direct-to-database. Fundamentally, there are $3$ key tasks carried out with the help of important new Classes/ objects.
+\begin{enumerate}
+	\item The Connection class
+		\begin{itemize}
+			\item A connection object is needed per DB connection
+			\item Created using driverManager's getConnection()
+			\item Has functions to connect to specified DB sources using URLs
+		\end{itemize}
+	\item The Statement class with two subclasses
+		\begin{itemize}
+			\item PreparedStatement and CallableStatement which have methods to execute an SQL command.
+			\item Need a statement object per SQL query / update you wish to issue
+		\end{itemize}
+	\item The ResultSet class
+	\begin{itemize}
+		\item Query results are returned into objects of this type
+		\item It is akin to tables, where result tuples are rows and columns are attributes
+	\end{itemize}
+\end{enumerate}
+\subsection{Programming}
+\subsubsection{Connection}
+The import the JDBC class library we write
+\begin{lstlisting}[language = Java , caption={JDBC import} , frame = trBL , firstnumber = last , escapeinside={(*@}{@*)}]
+import java.sql.*
+\end{lstlisting}
+We then load explicitly the JDBC driver: use a generic Java function for loading class e.g.,
+\begin{lstlisting}[language = Java , caption={Loading JDBC drivers} , frame = trBL , firstnumber = last , escapeinside={(*@}{@*)}]
+Class.forName("oracle.jdbc.driver.OracleDriver"); // for Oracle
+Class.forName("org.postgresql.Driver"); // for Postgresql
+\end{lstlisting}
+This register the driver with the driver manager and makes it available to the program. We now create vars for connection credentials, that is
+\begin{lstlisting}[language = Java , caption={Creating connection credentials} , frame = trBL , firstnumber = last , escapeinside={(*@}{@*)}]
+String dbacct, passwd, ssn, name;
+dbacct = readentry("Enter database account:");
+passwd = readentry("Enter password:");
+\end{lstlisting}
+Although this can also be replaced with the Scanner class to read any input from the console. Finally we use a connection object to connect to DB, that is
+\begin{lstlisting}[language = Java , caption={Connection to DB} , frame = trBL , firstnumber = last , escapeinside={(*@}{@*)}]
+Connection conn = DriverManager.getConnection("jdbc:oracle:oci8:" + dbacct + "/" + passwd);
+\end{lstlisting}
+After connection, it might be wise to check whether the Postgres Driver can be loaded by catching. In particukar,
+\begin{lstlisting}[language = Java , caption={Catching if driver can be loaded} , frame = trBL , firstnumber = last , escapeinside={(*@}{@*)}]
+try {
+	Class.forName("org.postgresql.Driver");
+}
+catch (ClassNotFoundException x) {
+	System.out.prinln("Driver could not be loaded");
+}
+\end{lstlisting}
+\begin{tcolorbox}[colback=black!3!white,colframe=black!60!white,title=\begin{exmp}Connecting to a local DB server \label{Connecting to a local DB server}\end{exmp}]
+\begin{lstlisting}[language = Java , caption={connecting to a local DB server} , frame = trBL , firstnumber = last , escapeinside={(*@}{@*)}]
+String username = "me";
+String password = "mypassword";
+String url = "jdbc:postgresql://127.0.0.1:5432/mydb?user=" + username + "&password=" + password;
+Connection conn = DriverManager.getConnection(url);
+\end{lstlisting}        
+\end{tcolorbox}
+\subsubsection{Statements and Queries}
+We now have loaded drivers and set up the DB connection. We now use a Statement object to hold a query. We use PreparedStatement if the query will be issued many times, that is, it is prepared, checked and compiled only once to save processing. It is used as such:
+\begin{lstlisting}[language = Java , caption={Statement Query} , frame = trBL , firstnumber = last , escapeinside={(*@}{@*)}]
+String stmt1 = "SELECT course, year FROM students WHERE Name = ? AND age = ?";
+PreparedStatement p = conn.preparedStatement(stmt1);
+p.setString(1, "John"); // says that the first ? is John as string
+p.setInt(2,20); // says that the second ? is 2 as int
+\end{lstlisting}
+After preparation, we can now run our statement using executeQuery. For every stmt object, there are 2 functions: executeQuery which returns an object of type ResultSet for the SELECT command and executeUpdate which is for INSERT, UPDATE, DELETE, CREATE and DROP, returning an integer for the number of affected tuples. The command to run our earlier statement is
+\begin{lstlisting}[language = Java , caption={executing the query} , frame = trBL , firstnumber = last , escapeinside={(*@}{@*)}]
+ResultSet r = p.executeQuery()
+\end{lstlisting}
+The object type of ResultSet contains the set of result. After executing $r$ call, $r$ refers to an initial position before the $1 $st tuple count in result. If $r$ is of type ResultSet, we can scroll through the results using $r.next()$. This will return a NULL in the end as the last result. In particular
+\begin{lstlisting}[language = Java , caption={Iterating through ResultSet} , frame = trBL , firstnumber = last , escapeinside={(*@}{@*)}]
+while (r.next()) {
+	course = r.getString(1); // The 1 refers to the attribute position within the tuple as defined in our query
+	year = r.getInt(2); // The 2 refers to the attribute position within the tuple as defined in our query
+	System.out.println(course + "," + year );
+}
+\end{lstlisting}
+\subsubsection{Updates}
+For creating tables, inserting and deleting tuples, etc. we first need a statement object, as per queries, over an established connection conn
+\begin{lstlisting}[language = Java , caption={Connection} , frame = trBL , firstnumber = last , escapeinside={(*@}{@*)}]
+Statement stmt = conn.createStatement();
+\end{lstlisting}
+We then use the executeUpdate method, i.e.,
+\begin{lstlisting}[language = Java , caption={Table Creation} , frame = trBL , firstnumber = last , escapeinside={(*@}{@*)}]
+String sql = "CREATE TABLE Students " + 
+							"(ID INTEGER NOT NULL, " +
+							"Name VARCHAR(25), " +
+							"gpa REAL DEFAULT 0.0, " +
+							"PRIMARY KEY (ID))";
+stmt.executeUpdate(sql)
+\end{lstlisting}
+You can further do other commands, such as INSERT by modifying the sql string
+\begin{lstlisting}[language = Java , caption={Insert} , frame = trBL , firstnumber = last , escapeinside={(*@}{@*)}]
+String sql = "INSERT INTO STAFF VALUES " + "(1234567, 'Peter')";
+\end{lstlisting}
+It is also possible to use a prepared statement for the actions described above. If done so, instead of $ResultSet \; r \;= \; p.executeQuery()$ would be $int rows = p.executeUpdate()$.
+\subsection{Errors}
+As specified before, one of the best errors we can implement is to see if the driver can be loaded earlier in the notes. However, managing errors with JDBC can get more complicated for different functions
+\subsubsection{Connections}
+When creating connections, we can check if it has been established with
+\begin{lstlisting}[language = Java , caption={Connection Error Catching} , frame = trBL , firstnumber = last , escapeinside={(*@}{@*)}]
+try {
+	connection conn = DriverManager.getConnection(URLstring);
+}
+catch (SQLException se) {
+	System.out.println("Could not open connection with connection string " + URLstring);
+	se.printStackTrace();
+}
+\end{lstlisting}
+\subsubsection{Statements}
+To catch errors using statements we use
+\begin{lstlisting}[language = Java , caption={Statements Error Catching} , frame = trBL , firstnumber = last , escapeinside={(*@}{@*)}]
+try {
+	Statement stmt = conn.createStatement();
+}
+catch (SQLException se) {
+	System.out.println("Could not create statement ");
+	se.printStackTrace();
+}
+\end{lstlisting}
+\subsubsection{Updating INSERT}
+\begin{lstlisting}[language = Java , caption={Update INSERT Error Catching} , frame = trBL , firstnumber = last , escapeinside={(*@}{@*)}]
+try {
+	String sql = "INSERT INTO Students VALUES " + "(1234567, 'Andrew H.')";
+	stmt.executeUpdate(sql);
+}
+catch (SQLException se) {
+	System.out.println("Could not insert tuple for Andrew H.");
+	se.printStackTrace();
+}
+\end{lstlisting}
+\subsubsection{Updating TUPLE}
+\begin{lstlisting}[language = Java , caption={Update UPDATE Error Catching} , frame = trBL , firstnumber = last , escapeinside={(*@}{@*)}]
+try {
+	int count = stmt.executeUpdate("UPDATE Students SET Name = 'Andrew Hague' WHERE ID = 1234567");
+catch (SQLException se) {
+	System.out.println("Could not update Andrew H.");
+	se.printStackTrace();
+}
+\end{lstlisting}
+\subsubsection{Querying}
+\begin{lstlisting}[language = Java , caption={Query Error Catching} , frame = trBL , firstnumber = last , escapeinside={(*@}{@*)}]
+try {
+	sql = "SELECT * FROM Students WHERE ID < 5555555";
+	rs = stmt.executeQuery(query);
+}
+catch (SQLException se) {
+	System.out.println("Could not get result of query " + sql);
+	se.printStackTrace();
+}
+\end{lstlisting}
+\section{Advanced SQL}
+\subsection{Multiple Tables}
+If we have multiple tables in FROM clause, then we compute the cartesian product of the tables, which produces a new table. And then we scan this table, one a time. You can think of this as a nested loop: for each tuple in the 1st table, concatenate it with each tuple of the 2nd table, in turn we achieve an operation called CROSS JOIN.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{cross.png}
+	\caption{Cross Join Table Example}
+	\label{fig:cross-png}
+\end{figure}
+Follow the coloured lines above to see how it cross joins. Each edge is a newly created tuple in the new table. To specify CROSS JOIN between two tables $R$ and $S$, we write
+\begin{align*}
+	R \text{ CROSS JOIN } S
+\end{align*}
+And similarly, for NATURAL JOIN
+\begin{align*}
+	R \text{ NATURAL JOIN }S
+\end{align*}
+Recall that queries create a table, therefore, we can also write
+\begin{align*}
+	query_1 \text{ CROSS JOIN } query_2 \\
+	query_1 \text{ NATURAL JOIN } query_2
+\end{align*}
+\subsection{NATURAL JOIN}
+$R$ NATURAL JOIN $S$ is equivalent to formatting the cross product of $R$ and $S$ and then looking for attributes of $ R$ that have the same name as attributes in $S$. Keep only tuples from product whose same-name-type attributes have same value. Only one of each set of duplicate columns is kept.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.45\textwidth]{njoin.png}
+	\caption{NATURAL JOIN}
+	\label{fig:njoin}
+\end{figure}
+\subsection{JOIN}
+This is an extension to natural joins and it allows us to combine constraints (in WHERE) and a product in 1 operations. The syntax is
+\begin{align*}
+	R \text{ JOINS } S \text{ ON }<\text{condition}>
+\end{align*}
+$<\text{condition}>$ is used for selecting tuples. If operator is $=$ this is called an equi-join. For example,
+\begin{align*}
+	\text{Drinkers D JOIN Frequents F ON D.drinker = F.drinker}
+\end{align*}
+returns $(d,a,d,b)$ quadruples such that drinker $d$ lives at address $a$ and frequents teaRoom $b$.
+The default join operator we have seen thus far is called inner join, for which there exist an explicit operator
+\begin{align*}
+	\text{SELECT } <\text{attList}> \text{ FROM } <\text{table1}> \text{ INNER JOIN } <\text{table2}> \text{ ON } <\text{expr}>;
+\end{align*}
+An inner join will combine the rows from $<\text{table1}>$ with the rows from $<\text{table2}>$ based on satisfying the ON boolean expression. The expression usually takes the form of a comparison between a column from table $1$ and a column from table $2$.
+\subsection{INNER JOIN}
+The inner join has the same functionality as
+\begin{align*}
+	\text{SELECT }*\text{ FROM student S, studentCourses C WHERE S.studentID = C.studentID}
+\end{align*}
+Explicitly using "Join" makes formatting more readable. Using 'ON' separates clauses that deal with sources of data i.e., belonging to FROM away from CLAUSES that deal with selection criteria
+\subsection{OUTER JOIN}
+Inner joins can "lose" information, become a tuple that doesn't join with any other relation disappears. Instead, outer join keeps this information and fills tuples that do not match with nulls if it is not matched when joining. You can further specify if you want to keep information on the left side or the right side, more specifically if you wanna keep information on the left table, then you type LEFT OUTER JOIN. You can further use the syntax $NATURAL$ to make the join natural, or use $ON$ syntax after the OUTER JOIN to specify when to join.
 \end{document}
