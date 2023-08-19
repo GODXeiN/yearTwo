@@ -17,19 +17,336 @@
 \gdef\HyperFirstAtBeginDocument#1{#1}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
-\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{2}{section.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}What is an operating system?}{2}{subsection.1.1}\protected@file@percent }
-\newlabel{Operating system}{{1.1}{2}{}{defn.1.1}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.1}Program Execution}{2}{subsubsection.1.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.2}I/O Operations}{2}{subsubsection.1.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.3}File System Management}{2}{subsubsection.1.1.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.4}Error handling}{2}{subsubsection.1.1.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.5}Resource Allocation}{2}{subsubsection.1.1.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.6}Accounting}{2}{subsubsection.1.1.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.7}Protection and Security}{2}{subsubsection.1.1.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}What is the Kernel?}{3}{subsection.1.2}\protected@file@percent }
-\newlabel{Kernel}{{1.2}{3}{}{defn.1.2}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.1}Kernel Space vs User Space}{3}{subsubsection.1.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.2}System Calls}{3}{subsubsection.1.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.3}Dual mode operation}{3}{subsubsection.1.2.3}\protected@file@percent }
-\gdef \@abspage@last{4}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Operating Systems}{2}{section.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Kernel}{2}{subsection.1.1}\protected@file@percent }
+\newlabel{Kernel}{{1.1}{2}{}{defn.1.1}{}}
+\newlabel{Monolithic Kernel}{{1.2}{2}{}{defn.1.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Monolithic Kernel\relax }}{2}{figure.caption.3}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:one-png}{{1}{2}{Monolithic Kernel\relax }{figure.caption.3}{}}
+\newlabel{Layers}{{1.3}{3}{}{defn.1.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Layer $N$ - User Interface\relax }}{3}{figure.caption.4}\protected@file@percent }
+\newlabel{fig:two-png}{{2}{3}{Layer $N$ - User Interface\relax }{figure.caption.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Layered Approach Pros and Cons\relax }}{3}{table.caption.5}\protected@file@percent }
+\newlabel{tab:laytab}{{1}{3}{Layered Approach Pros and Cons\relax }{table.caption.5}{}}
+\newlabel{Microkernel}{{1.4}{4}{}{defn.1.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Microkernel\relax }}{4}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:three-png}{{3}{4}{Microkernel\relax }{figure.caption.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Microkernel Pros and Cons\relax }}{4}{table.caption.7}\protected@file@percent }
+\newlabel{tab:laytab}{{2}{4}{Microkernel Pros and Cons\relax }{table.caption.7}{}}
+\newlabel{Loadable Kernel Module}{{1.5}{4}{}{defn.1.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Loadable Kernel Modules\relax }}{4}{figure.caption.8}\protected@file@percent }
+\newlabel{fig:four-png}{{4}{4}{Loadable Kernel Modules\relax }{figure.caption.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Processes}{5}{subsection.1.2}\protected@file@percent }
+\newlabel{Process}{{1.6}{5}{}{defn.1.6}{}}
+\newlabel{Process in memory}{{1.1}{5}{}{exmp.1.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Virtual address space of a process\relax }}{5}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:five-png}{{5}{5}{Virtual address space of a process\relax }{figure.caption.9}{}}
+\newlabel{Process Control Block (PCB)}{{1.7}{6}{}{defn.1.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces PCB of a process\relax }}{6}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:six-png}{{6}{6}{PCB of a process\relax }{figure.caption.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces CPU switching between processes\relax }}{6}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:seven-png}{{7}{6}{CPU switching between processes\relax }{figure.caption.11}{}}
+\newlabel{Process Scheduling}{{1.8}{7}{}{defn.1.8}{}}
+\newlabel{Short-term Scheduler}{{1.9}{7}{}{defn.1.9}{}}
+\newlabel{Long-Term Scheduler}{{1.10}{7}{}{defn.1.10}{}}
+\newlabel{Process Creation}{{1.11}{7}{}{defn.1.11}{}}
+\newlabel{Fork()}{{1.2}{8}{}{exmp.1.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Fork example\relax }}{8}{figure.caption.12}\protected@file@percent }
+\newlabel{fig:eight-png}{{8}{8}{Fork example\relax }{figure.caption.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Fork system and execlp\relax }}{8}{figure.caption.13}\protected@file@percent }
+\newlabel{fig:ninenine-pngpng}{{9}{8}{Fork system and execlp\relax }{figure.caption.13}{}}
+\newlabel{Process Termination}{{1.12}{8}{}{defn.1.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3}Interprocess Communication (IPC)}{9}{subsection.1.3}\protected@file@percent }
+\newlabel{Interprocess Communication (IPC)}{{1.13}{9}{}{defn.1.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Message Passing vs Shared Memory\relax }}{9}{figure.caption.14}\protected@file@percent }
+\newlabel{fig:ten-png}{{10}{9}{Message Passing vs Shared Memory\relax }{figure.caption.14}{}}
+\newlabel{Shared Memory}{{1.14}{10}{}{defn.1.14}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Shared Memory\relax }}{10}{figure.caption.15}\protected@file@percent }
+\newlabel{fig:eleven-png}{{11}{10}{Shared Memory\relax }{figure.caption.15}{}}
+\newlabel{Producer-Consumer Paradogim}{{1.15}{10}{}{defn.1.15}{}}
+\newlabel{Message Passing Systems}{{1.16}{10}{}{defn.1.16}{}}
+\newlabel{Buffering}{{1.17}{11}{}{defn.1.17}{}}
+\newlabel{Examples of IPC}{{1.3}{11}{}{exmp.1.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Shared Memory Communication using mmap\relax }}{11}{figure.caption.16}\protected@file@percent }
+\newlabel{fig:twelve-png}{{12}{11}{Shared Memory Communication using mmap\relax }{figure.caption.16}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Ordinary pipe\relax }}{11}{figure.caption.17}\protected@file@percent }
+\newlabel{fig:thirteen-png}{{13}{11}{Ordinary pipe\relax }{figure.caption.17}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Ordinary Pipe in C\relax }}{12}{figure.caption.18}\protected@file@percent }
+\newlabel{fig:fourteen-png}{{14}{12}{Ordinary Pipe in C\relax }{figure.caption.18}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Named Pipes in UNIX\relax }}{12}{figure.caption.19}\protected@file@percent }
+\newlabel{fig:fifteen-png}{{15}{12}{Named Pipes in UNIX\relax }{figure.caption.19}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4}Threading}{13}{subsection.1.4}\protected@file@percent }
+\newlabel{Thread}{{1.21}{13}{}{defn.1.21}{}}
+\newlabel{Multithreading}{{1.22}{13}{}{defn.1.22}{}}
+\newlabel{Concurrency vs Parallelism}{{1.23}{13}{}{defn.1.23}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Concurrency vs parallelism\relax }}{13}{figure.caption.20}\protected@file@percent }
+\newlabel{fig:twentyseven-png}{{16}{13}{Concurrency vs parallelism\relax }{figure.caption.20}{}}
+\newlabel{Data parallelism and task parallelism}{{1.24}{14}{}{defn.1.24}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Data vs task parallelism\relax }}{14}{figure.caption.21}\protected@file@percent }
+\newlabel{fig:twentyeight-png}{{17}{14}{Data vs task parallelism\relax }{figure.caption.21}{}}
+\newlabel{Amdahl's Law}{{1.1}{14}{}{thm.1.1}{}}
+\newlabel{Thread Synchronosation}{{1.25}{14}{}{defn.1.25}{}}
+\newlabel{Thread Sync}{{1.4}{15}{}{exmp.1.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Order of operations without sync\relax }}{15}{figure.caption.22}\protected@file@percent }
+\newlabel{fig:twentynine-png}{{18}{15}{Order of operations without sync\relax }{figure.caption.22}{}}
+\newlabel{Mutex Locks}{{1.26}{15}{}{defn.1.26}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Mutex Lock\relax }}{15}{figure.caption.23}\protected@file@percent }
+\newlabel{fig:thirty-png}{{19}{15}{Mutex Lock\relax }{figure.caption.23}{}}
+\newlabel{User-level and Kernel level threads}{{1.27}{16}{}{defn.1.27}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces User-level and Kernel-level threads\relax }}{16}{figure.caption.24}\protected@file@percent }
+\newlabel{fig:thirtyone-png}{{20}{16}{User-level and Kernel-level threads\relax }{figure.caption.24}{}}
+\newlabel{One-to-one model}{{1.28}{16}{}{defn.1.28}{}}
+\newlabel{Many-to-one model}{{1.29}{17}{}{defn.1.29}{}}
+\newlabel{Many-tomany model}{{1.30}{17}{}{defn.1.30}{}}
+\newlabel{One thread-per-request strategy}{{1.31}{17}{}{defn.1.31}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces 1 TPS strategy\relax }}{17}{figure.caption.25}\protected@file@percent }
+\newlabel{fig:thirtytwo-png}{{21}{17}{1 TPS strategy\relax }{figure.caption.25}{}}
+\newlabel{Thread Pool Strategy}{{1.32}{18}{}{defn.1.32}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces Thread Pool\relax }}{18}{figure.caption.26}\protected@file@percent }
+\newlabel{fig:thirtythree-png}{{22}{18}{Thread Pool\relax }{figure.caption.26}{}}
+\newlabel{Signal Handling}{{1.33}{18}{}{defn.1.33}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.5}Scheduling}{19}{subsection.1.5}\protected@file@percent }
+\newlabel{CPU and I/O bursts}{{1.34}{19}{}{defn.1.34}{}}
+\newlabel{Performance Measures}{{1.35}{19}{}{defn.1.35}{}}
+\newlabel{Types of scheduling}{{1.36}{19}{}{defn.1.36}{}}
+\newlabel{First Come First Serve (FCFS)}{{1.37}{19}{}{defn.1.37}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces FCFS Scheduler\relax }}{19}{figure.caption.27}\protected@file@percent }
+\newlabel{fig:thirtysix-png}{{23}{19}{FCFS Scheduler\relax }{figure.caption.27}{}}
+\newlabel{Shorest Job First (SJF)}{{1.38}{20}{}{defn.1.38}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces SJF\relax }}{20}{figure.caption.28}\protected@file@percent }
+\newlabel{fig:thirtyseven-png}{{24}{20}{SJF\relax }{figure.caption.28}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces Preemptive SJF\relax }}{20}{figure.caption.29}\protected@file@percent }
+\newlabel{fig:thirtyeight-png}{{25}{20}{Preemptive SJF\relax }{figure.caption.29}{}}
+\newlabel{Priority Scheduling}{{1.39}{20}{}{defn.1.39}{}}
+\newlabel{Round Roubin (RR}{{1.40}{21}{}{defn.1.40}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {26}{\ignorespaces RR schedule with $q=4$\relax }}{21}{figure.caption.30}\protected@file@percent }
+\newlabel{fig:thirtynine-png}{{26}{21}{RR schedule with $q=4$\relax }{figure.caption.30}{}}
+\newlabel{Exponential Moving Average}{{1.2}{21}{}{thm.1.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.6}Synchronisation}{21}{subsection.1.6}\protected@file@percent }
+\newlabel{Critical Section}{{1.41}{21}{}{defn.1.41}{}}
+\newlabel{The Critical Section Problem}{{1.42}{22}{}{defn.1.42}{}}
+\newlabel{Possible solution for two processes}{{1.5}{23}{}{exmp.1.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {27}{\ignorespaces Turn solution\relax }}{23}{figure.caption.31}\protected@file@percent }
+\newlabel{fig:fourty-png}{{27}{23}{Turn solution\relax }{figure.caption.31}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {28}{\ignorespaces Peterson's Algorithm\relax }}{23}{figure.caption.32}\protected@file@percent }
+\newlabel{fig:fourtyone-png}{{28}{23}{Peterson's Algorithm\relax }{figure.caption.32}{}}
+\newlabel{Locks}{{1.43}{24}{}{defn.1.43}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {29}{\ignorespaces Locks\relax }}{24}{figure.caption.33}\protected@file@percent }
+\newlabel{fig:fourtytwo-png}{{29}{24}{Locks\relax }{figure.caption.33}{}}
+\newlabel{Test and set Instruction}{{1.6}{25}{}{exmp.1.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {30}{\ignorespaces Test and set solution\relax }}{25}{figure.caption.34}\protected@file@percent }
+\newlabel{fig:fourtythree-png}{{30}{25}{Test and set solution\relax }{figure.caption.34}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {31}{\ignorespaces Better solution\relax }}{25}{figure.caption.35}\protected@file@percent }
+\newlabel{fig:fourtyfour-png}{{31}{25}{Better solution\relax }{figure.caption.35}{}}
+\newlabel{Synchronisation Primitives}{{1.44}{25}{}{defn.1.44}{}}
+\newlabel{Mutex Lock}{{1.45}{26}{}{defn.1.45}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {32}{\ignorespaces Mutex Lock\relax }}{26}{figure.caption.36}\protected@file@percent }
+\newlabel{fig:fourtyfive-png}{{32}{26}{Mutex Lock\relax }{figure.caption.36}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {33}{\ignorespaces Mutex Lock Implementation\relax }}{26}{figure.caption.37}\protected@file@percent }
+\newlabel{fig:fourtysix-png}{{33}{26}{Mutex Lock Implementation\relax }{figure.caption.37}{}}
+\newlabel{Semaphores}{{1.46}{27}{}{defn.1.46}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {34}{\ignorespaces Semaphore as mutex\relax }}{27}{figure.caption.38}\protected@file@percent }
+\newlabel{fig:fourtyseven-png}{{34}{27}{Semaphore as mutex\relax }{figure.caption.38}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {35}{\ignorespaces Semaphore with higher number\relax }}{27}{figure.caption.39}\protected@file@percent }
+\newlabel{fig:fourtyeight-png}{{35}{27}{Semaphore with higher number\relax }{figure.caption.39}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {36}{\ignorespaces Semaphore implementation\relax }}{27}{figure.caption.40}\protected@file@percent }
+\newlabel{fig:fourtynine-png}{{36}{27}{Semaphore implementation\relax }{figure.caption.40}{}}
+\newlabel{Deadlock}{{1.47}{28}{}{defn.1.47}{}}
+\newlabel{Starvation}{{1.48}{28}{}{defn.1.48}{}}
+\newlabel{Priority Inversion}{{1.49}{28}{}{defn.1.49}{}}
+\newlabel{Bounded Buffer Problem}{{1.50}{29}{}{defn.1.50}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {37}{\ignorespaces Producer\relax }}{29}{figure.caption.41}\protected@file@percent }
+\newlabel{fig:fifty-png}{{37}{29}{Producer\relax }{figure.caption.41}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {38}{\ignorespaces Consumer\relax }}{29}{figure.caption.42}\protected@file@percent }
+\newlabel{fig:fiftyone-png}{{38}{29}{Consumer\relax }{figure.caption.42}{}}
+\newlabel{Readers and Writers problem}{{1.51}{30}{}{defn.1.51}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {39}{\ignorespaces Writer Process\relax }}{30}{figure.caption.43}\protected@file@percent }
+\newlabel{fig:fiftytwo-png}{{39}{30}{Writer Process\relax }{figure.caption.43}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {40}{\ignorespaces Reader Process\relax }}{30}{figure.caption.44}\protected@file@percent }
+\newlabel{fig:fiftythree-png}{{40}{30}{Reader Process\relax }{figure.caption.44}{}}
+\newlabel{Dining Philosophers}{{1.52}{31}{}{defn.1.52}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {41}{\ignorespaces Dining Philosophers solution\relax }}{31}{figure.caption.45}\protected@file@percent }
+\newlabel{fig:fiftyfour-png}{{41}{31}{Dining Philosophers solution\relax }{figure.caption.45}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.7}Deadlocks}{31}{subsection.1.7}\protected@file@percent }
+\newlabel{Deadlock}{{1.53}{31}{}{defn.1.53}{}}
+\newlabel{A quick example}{{1.7}{31}{}{exmp.1.7}{}}
+\newlabel{System Model}{{1.54}{31}{}{defn.1.54}{}}
+\newlabel{Necessary conditions for Deadlock}{{1.55}{32}{}{defn.1.55}{}}
+\newlabel{Resource Allocation Graph}{{1.56}{32}{}{defn.1.56}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {42}{\ignorespaces Illustration of our graph\relax }}{32}{figure.caption.46}\protected@file@percent }
+\newlabel{fig:sixtyseven-png}{{42}{32}{Illustration of our graph\relax }{figure.caption.46}{}}
+\newlabel{Resource Allocation Graph Example}{{1.8}{33}{}{exmp.1.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {43}{\ignorespaces Example Graph\relax }}{33}{figure.caption.47}\protected@file@percent }
+\newlabel{fig:sixtyeight-png}{{43}{33}{Example Graph\relax }{figure.caption.47}{}}
+\newlabel{Conclusion for Graph}{{1.57}{33}{}{defn.1.57}{}}
+\newlabel{Deadlock Detecction Algorithm}{{1.58}{33}{}{defn.1.58}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {44}{\ignorespaces Deadlock Detection Tabular Form\relax }}{33}{figure.caption.48}\protected@file@percent }
+\newlabel{fig:sixtynine-png}{{44}{33}{Deadlock Detection Tabular Form\relax }{figure.caption.48}{}}
+\newlabel{Deadlock Prevention}{{1.59}{34}{}{defn.1.59}{}}
+\newlabel{Deadlock Avoidance}{{1.60}{34}{}{defn.1.60}{}}
+\newlabel{Banker's Safety Algorithm}{{1.61}{34}{}{defn.1.61}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {45}{\ignorespaces Banker's Algorithm Table\relax }}{34}{figure.caption.49}\protected@file@percent }
+\newlabel{fig:seventy-png}{{45}{34}{Banker's Algorithm Table\relax }{figure.caption.49}{}}
+\newlabel{Resource Request Algorithm}{{1.62}{34}{}{defn.1.62}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.8}Memory}{35}{subsection.1.8}\protected@file@percent }
+\newlabel{Logical vs Physical Address Space}{{1.63}{35}{}{defn.1.63}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {46}{\ignorespaces Logical to Physical\relax }}{35}{figure.caption.50}\protected@file@percent }
+\newlabel{fig:seventyone-png}{{46}{35}{Logical to Physical\relax }{figure.caption.50}{}}
+\newlabel{Memory Allocation}{{1.64}{35}{}{defn.1.64}{}}
+\newlabel{Contiguous Memory Allocation}{{1.65}{36}{}{defn.1.65}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {47}{\ignorespaces Partitions and holes\relax }}{36}{figure.caption.51}\protected@file@percent }
+\newlabel{fig:seventytwo-png}{{47}{36}{Partitions and holes\relax }{figure.caption.51}{}}
+\newlabel{Fragmentation}{{1.66}{36}{}{defn.1.66}{}}
+\newlabel{Segmentation}{{1.67}{37}{}{defn.1.67}{}}
+\newlabel{Paging}{{1.68}{37}{}{defn.1.68}{}}
+\newlabel{Logical Address under Paging}{{1.69}{38}{}{defn.1.69}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {48}{\ignorespaces Table breakdown\relax }}{38}{figure.caption.52}\protected@file@percent }
+\newlabel{fig:seventythree-png}{{48}{38}{Table breakdown\relax }{figure.caption.52}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {49}{\ignorespaces Paging Retrieval\relax }}{38}{figure.caption.53}\protected@file@percent }
+\newlabel{fig:seventyfour-png}{{49}{38}{Paging Retrieval\relax }{figure.caption.53}{}}
+\newlabel{Directly from the memory}{{1.70}{39}{}{defn.1.70}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {50}{\ignorespaces Illustration\relax }}{39}{figure.caption.54}\protected@file@percent }
+\newlabel{fig:seventyfive-png}{{50}{39}{Illustration\relax }{figure.caption.54}{}}
+\newlabel{Translation Lookaside Buffer (TLB)}{{1.71}{40}{}{defn.1.71}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {51}{\ignorespaces TLB\relax }}{40}{figure.caption.55}\protected@file@percent }
+\newlabel{fig:seventysix-png}{{51}{40}{TLB\relax }{figure.caption.55}{}}
+\newlabel{Effective Access Time}{{1.72}{40}{}{defn.1.72}{}}
+\newlabel{Access Time Example}{{1.9}{40}{}{exmp.1.9}{}}
+\newlabel{Smaller Page Tables}{{1.73}{40}{}{defn.1.73}{}}
+\newlabel{Hierarchal Multi-level paging tables}{{1.74}{41}{}{defn.1.74}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {52}{\ignorespaces Addressing with Multi-Level Paging\relax }}{41}{figure.caption.56}\protected@file@percent }
+\newlabel{fig:seventyseven-png}{{52}{41}{Addressing with Multi-Level Paging\relax }{figure.caption.56}{}}
+\newlabel{Hashed Table Maps}{{1.75}{41}{}{defn.1.75}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Networks}{41}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Components of a network}{41}{subsection.2.1}\protected@file@percent }
+\newlabel{Network}{{2.1}{41}{}{defn.2.1}{}}
+\newlabel{Network Edge}{{2.2}{41}{}{defn.2.2}{}}
+\newlabel{Network core}{{2.3}{41}{}{defn.2.3}{}}
+\newlabel{Communication links}{{2.4}{42}{}{defn.2.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {53}{\ignorespaces Components of a network\relax }}{42}{figure.caption.57}\protected@file@percent }
+\newlabel{fig:sixteen-png}{{53}{42}{Components of a network\relax }{figure.caption.57}{}}
+\newlabel{End-host}{{2.5}{42}{}{defn.2.5}{}}
+\newlabel{Network Core}{{2.6}{43}{}{defn.2.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Delay}{43}{subsection.2.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {54}{\ignorespaces Routing\relax }}{43}{figure.caption.58}\protected@file@percent }
+\newlabel{fig:seventeen-png}{{54}{43}{Routing\relax }{figure.caption.58}{}}
+\newlabel{Store-and-forward principle}{{2.7}{43}{}{defn.2.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {55}{\ignorespaces Store-and-forward principle\relax }}{43}{figure.caption.59}\protected@file@percent }
+\newlabel{fig:eighteen-png}{{55}{43}{Store-and-forward principle\relax }{figure.caption.59}{}}
+\newlabel{Queueing delay and loss}{{2.8}{44}{}{defn.2.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {56}{\ignorespaces Queueing delay\relax }}{44}{figure.caption.60}\protected@file@percent }
+\newlabel{fig:nineteen-png}{{56}{44}{Queueing delay\relax }{figure.caption.60}{}}
+\newlabel{Four sourceso f delay}{{2.1}{44}{}{thm.2.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {57}{\ignorespaces Delay process\relax }}{44}{figure.caption.61}\protected@file@percent }
+\newlabel{fig:}{{57}{44}{Delay process\relax }{figure.caption.61}{}}
+\newlabel{Throughput}{{2.9}{44}{}{defn.2.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Internet}{45}{subsection.2.3}\protected@file@percent }
+\newlabel{Protocol}{{2.10}{45}{}{defn.2.10}{}}
+\newlabel{Packet Switching}{{2.11}{45}{}{defn.2.11}{}}
+\newlabel{Circuit Switching}{{2.12}{45}{}{defn.2.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {58}{\ignorespaces Packet vs Circuit\relax }}{45}{figure.caption.62}\protected@file@percent }
+\newlabel{fig:twentyone-png}{{58}{45}{Packet vs Circuit\relax }{figure.caption.62}{}}
+\newlabel{Design Philosophy Layering}{{2.13}{46}{}{defn.2.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {59}{\ignorespaces Internet Protocol Stack\relax }}{46}{figure.caption.63}\protected@file@percent }
+\newlabel{fig:twentytwo-png}{{59}{46}{Internet Protocol Stack\relax }{figure.caption.63}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {60}{\ignorespaces Internet Protocol Stack\relax }}{46}{figure.caption.64}\protected@file@percent }
+\newlabel{fig:twentythree-png}{{60}{46}{Internet Protocol Stack\relax }{figure.caption.64}{}}
+\newlabel{Sockets}{{2.14}{46}{}{defn.2.14}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {61}{\ignorespaces Socket, internet and user process functionality\relax }}{46}{figure.caption.65}\protected@file@percent }
+\newlabel{fig:twentyfour-png}{{61}{46}{Socket, internet and user process functionality\relax }{figure.caption.65}{}}
+\newlabel{Addressing Processes}{{2.15}{47}{}{defn.2.15}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Transport Layer}{47}{subsection.2.4}\protected@file@percent }
+\newlabel{Transmission Control Protocol (TCP)}{{2.16}{47}{}{defn.2.16}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {62}{\ignorespaces TCP protocol\relax }}{47}{figure.caption.66}\protected@file@percent }
+\newlabel{fig:twentyfive-png}{{62}{47}{TCP protocol\relax }{figure.caption.66}{}}
+\newlabel{User Datagram Protocol (UDP)}{{2.17}{48}{}{defn.2.17}{}}
+\newlabel{Non-Persistent HTTP}{{2.1}{48}{}{exmp.2.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {63}{\ignorespaces RTT\relax }}{48}{figure.caption.67}\protected@file@percent }
+\newlabel{fig:twentysix-png}{{63}{48}{RTT\relax }{figure.caption.67}{}}
+\newlabel{Persistent HTTP}{{2.2}{49}{}{exmp.2.2}{}}
+\newlabel{Web Cache}{{2.18}{49}{}{defn.2.18}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Selected Topics in Networking}{49}{subsection.2.5}\protected@file@percent }
+\newlabel{Network Interface}{{2.19}{49}{}{defn.2.19}{}}
+\newlabel{SYN attack}{{2.20}{49}{}{defn.2.20}{}}
+\newlabel{ARP Cache Poisoning Attack}{{2.21}{50}{}{defn.2.21}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {64}{\ignorespaces MAC Address in networks\relax }}{50}{figure.caption.68}\protected@file@percent }
+\newlabel{fig:thirtyfour-png}{{64}{50}{MAC Address in networks\relax }{figure.caption.68}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {65}{\ignorespaces New MAC src and dest\relax }}{50}{figure.caption.69}\protected@file@percent }
+\newlabel{fig:thirtyfive-png}{{65}{50}{New MAC src and dest\relax }{figure.caption.69}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6}Transport Layer 2}{50}{subsection.2.6}\protected@file@percent }
+\newlabel{Reliable transfer over a unreliable channel}{{2.22}{51}{}{defn.2.22}{}}
+\newlabel{Stop and Wait ARQ}{{2.23}{51}{}{defn.2.23}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {66}{\ignorespaces Stop and wait ARQ\relax }}{51}{figure.caption.70}\protected@file@percent }
+\newlabel{fig:fiftyfive-png}{{66}{51}{Stop and wait ARQ\relax }{figure.caption.70}{}}
+\newlabel{Performance of stop and wait ERQ}{{2.3}{52}{}{exmp.2.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {67}{\ignorespaces Problem in an image\relax }}{52}{figure.caption.71}\protected@file@percent }
+\newlabel{fig:fiftysix-png}{{67}{52}{Problem in an image\relax }{figure.caption.71}{}}
+\newlabel{Delay Bandwidth Product}{{2.24}{52}{}{defn.2.24}{}}
+\newlabel{Pipelined protocols}{{2.25}{52}{}{defn.2.25}{}}
+\newlabel{Go-Back-N Protocol}{{2.26}{53}{}{defn.2.26}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {68}{\ignorespaces Go-Back-N Visualised\relax }}{53}{figure.caption.72}\protected@file@percent }
+\newlabel{fig:fiftyseven-png}{{68}{53}{Go-Back-N Visualised\relax }{figure.caption.72}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {69}{\ignorespaces Go-Back-N Scenario $2$ Visualised\relax }}{53}{figure.caption.73}\protected@file@percent }
+\newlabel{fig:fiftyeight-png}{{69}{53}{Go-Back-N Scenario $2$ Visualised\relax }{figure.caption.73}{}}
+\newlabel{Selective Repeat (SR)}{{2.27}{54}{}{defn.2.27}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {70}{\ignorespaces Selective Repeat\relax }}{54}{figure.caption.74}\protected@file@percent }
+\newlabel{fig:fiftynine-png}{{70}{54}{Selective Repeat\relax }{figure.caption.74}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {71}{\ignorespaces SR in action\relax }}{54}{figure.caption.75}\protected@file@percent }
+\newlabel{fig:sixty-png}{{71}{54}{SR in action\relax }{figure.caption.75}{}}
+\newlabel{TCP reliable data transfer}{{2.28}{55}{}{defn.2.28}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {72}{\ignorespaces Lost ACK Scenario\relax }}{55}{figure.caption.76}\protected@file@percent }
+\newlabel{fig:sixtyone-png}{{72}{55}{Lost ACK Scenario\relax }{figure.caption.76}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {73}{\ignorespaces Delayed ACK scenario\relax }}{55}{figure.caption.77}\protected@file@percent }
+\newlabel{fig:sixtytwo-png}{{73}{55}{Delayed ACK scenario\relax }{figure.caption.77}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {74}{\ignorespaces Cumulative ACK Scenario\relax }}{56}{figure.caption.78}\protected@file@percent }
+\newlabel{fig:sixtythree-png}{{74}{56}{Cumulative ACK Scenario\relax }{figure.caption.78}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {75}{\ignorespaces Lost Packet Scenario\relax }}{56}{figure.caption.79}\protected@file@percent }
+\newlabel{fig:sixtyfour-png}{{75}{56}{Lost Packet Scenario\relax }{figure.caption.79}{}}
+\newlabel{Flow Control}{{2.29}{57}{}{defn.2.29}{}}
+\newlabel{Congestion Control}{{2.30}{58}{}{defn.2.30}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {76}{\ignorespaces AIMD\relax }}{58}{figure.caption.80}\protected@file@percent }
+\newlabel{fig:sixtyfive-png}{{76}{58}{AIMD\relax }{figure.caption.80}{}}
+\newlabel{TCP Slow Start and ssthresh}{{2.31}{59}{}{defn.2.31}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {77}{\ignorespaces Visualisation of ssthresh\relax }}{59}{figure.caption.81}\protected@file@percent }
+\newlabel{fig:sixtysix-png}{{77}{59}{Visualisation of ssthresh\relax }{figure.caption.81}{}}
+\newlabel{Reacting Losses: timeout and duplicate ACKs}{{2.32}{59}{}{defn.2.32}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.7}Network Layer}{59}{subsection.2.7}\protected@file@percent }
+\newlabel{Main Functions}{{2.33}{59}{}{defn.2.33}{}}
+\newlabel{Two key functions of routers}{{2.34}{60}{}{defn.2.34}{}}
+\newlabel{Routing Table}{{2.35}{60}{}{defn.2.35}{}}
+\newlabel{Longest Prefix Matching}{{2.36}{60}{}{defn.2.36}{}}
+\newlabel{IP addressing and subnets}{{2.37}{60}{}{defn.2.37}{}}
+\newlabel{Default Gateway}{{2.38}{61}{}{defn.2.38}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {78}{\ignorespaces Subnets example\relax }}{61}{figure.caption.82}\protected@file@percent }
+\newlabel{fig:seventyseven-png}{{78}{61}{Subnets example\relax }{figure.caption.82}{}}
+\newlabel{How IP addresses are obtained}{{2.39}{61}{}{defn.2.39}{}}
+\newlabel{Network Address Translation (NAT)}{{2.40}{61}{}{defn.2.40}{}}
+\newlabel{Public and private IP addresses}{{2.41}{62}{}{defn.2.41}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {79}{\ignorespaces NAT demonstration\relax }}{62}{figure.caption.83}\protected@file@percent }
+\newlabel{fig:seventynine-png}{{79}{62}{NAT demonstration\relax }{figure.caption.83}{}}
+\newlabel{Routing}{{2.42}{62}{}{defn.2.42}{}}
+\newlabel{Dijkstra's Algorithm}{{2.2}{63}{}{thm.2.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {80}{\ignorespaces Dijkstra's Algorithm Pseudocode\relax }}{63}{figure.caption.84}\protected@file@percent }
+\newlabel{fig:eighty-png}{{80}{63}{Dijkstra's Algorithm Pseudocode\relax }{figure.caption.84}{}}
+\newlabel{Dijkstra's Algorithm}{{2.4}{63}{}{exmp.2.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {81}{\ignorespaces Example Network\relax }}{63}{figure.caption.85}\protected@file@percent }
+\newlabel{fig:eightyone-png}{{81}{63}{Example Network\relax }{figure.caption.85}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Dijkstra\relax }}{63}{table.caption.86}\protected@file@percent }
+\newlabel{tab:label}{{3}{63}{Dijkstra\relax }{table.caption.86}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Dijkstra\relax }}{64}{table.caption.87}\protected@file@percent }
+\newlabel{tab:dijkstra}{{4}{64}{Dijkstra\relax }{table.caption.87}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Dijkstra\relax }}{64}{table.caption.88}\protected@file@percent }
+\newlabel{tab:dijkstra}{{5}{64}{Dijkstra\relax }{table.caption.88}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Dijkstra\relax }}{64}{table.caption.89}\protected@file@percent }
+\newlabel{tab:dijkstra}{{6}{64}{Dijkstra\relax }{table.caption.89}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {82}{\ignorespaces Dijkstra End\relax }}{64}{figure.caption.90}\protected@file@percent }
+\newlabel{fig:eightytwo-png}{{82}{64}{Dijkstra End\relax }{figure.caption.90}{}}
+\newlabel{Bellman-Ford Equation}{{2.3}{65}{}{thm.2.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {83}{\ignorespaces Example of BF\relax }}{65}{figure.caption.91}\protected@file@percent }
+\newlabel{fig:eightythree-png}{{83}{65}{Example of BF\relax }{figure.caption.91}{}}
+\newlabel{Distance Vector Algorithm}{{2.43}{65}{}{defn.2.43}{}}
+\newlabel{Distance Vector}{{2.5}{66}{}{exmp.2.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {84}{\ignorespaces Distance Vector Example\relax }}{66}{figure.caption.92}\protected@file@percent }
+\newlabel{fig:eightyfour-png}{{84}{66}{Distance Vector Example\relax }{figure.caption.92}{}}
+\gdef \@abspage@last{67}
