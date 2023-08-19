@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.30)  3 JAN 2023 19:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.7.20)  19 AUG 2023 19:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -704,7 +704,35 @@ File: lstlang2.sty 2020/03/24 1.8d listings language file
 LaTeX Font Info:    Trying to load font information for T1+qtm on input line 87.
  (/usr/share/texmf/tex/latex/tex-gyre/t1qtm.fd
 File: t1qtm.fd 2009/09/25 v1.2 font definition file for T1/qtm
-) (./notes.aux)
+) (./notes.aux
+
+LaTeX Warning: Label `Fig:4Data1' multiply defined.
+
+
+LaTeX Warning: Label `Fig:Data2' multiply defined.
+
+
+LaTeX Warning: Label `Fig:4Data1' multiply defined.
+
+
+LaTeX Warning: Label `Fig:Data2' multiply defined.
+
+
+LaTeX Warning: Label `Fig:4Data1' multiply defined.
+
+
+LaTeX Warning: Label `Fig:Data2' multiply defined.
+
+
+LaTeX Warning: Label `Fig:4Data1' multiply defined.
+
+
+LaTeX Warning: Label `Fig:Data2' multiply defined.
+
+
+LaTeX Warning: Label `Markov Decision Process' multiply defined.
+
+)
 \openout1 = `notes.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
@@ -822,7 +850,7 @@ Package epstopdf Info: Source file: <crest_black.eps>
 (epstopdf)             Command: <repstopdf --outfile=crest_black-eps-converted-to.pdf crest_black.eps>
 (epstopdf)             \includegraphics on input line 104.
 Package epstopdf Info: Output file is already uptodate.
-<crest_black-eps-converted-to.pdf, id=95, 64.24pt x 80.3pt>
+<crest_black-eps-converted-to.pdf, id=248, 64.24pt x 80.3pt>
 File: crest_black-eps-converted-to.pdf Graphic file (type pdf)
 <use crest_black-eps-converted-to.pdf>
 Package pdftex.def Info: crest_black-eps-converted-to.pdf  used on input line 104.
@@ -859,15 +887,15 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
+)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.52 ... Uncertainty (Bayesian AI)}{32}{section.9}
+                                                  % [1])
 \tf@toc=\write5
 \openout5 = `notes.toc'.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.112 	\newpage
-                [1]
+ [2]
 
 ./notes.tex:121: LaTeX Error: \begin{defn} on input line 121 ended by \end{deft}.
 
@@ -904,20 +932,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 147--148
 
  []
 
-[2] [3]
-<1.png, id=153, 428.60126pt x 387.4475pt>
+[3] [4]
+<1.png, id=348, 428.60126pt x 387.4475pt>
 File: 1.png Graphic file (type png)
 <use 1.png>
 Package pdftex.def Info: 1.png  used on input line 193.
 (pdftex.def)             Requested size: 226.48395pt x 204.73726pt.
- [4]
-<2.png, id=159, 664.4825pt x 391.4625pt>
+ [5]
+<2.png, id=354, 664.4825pt x 391.4625pt>
 File: 2.png Graphic file (type png)
 <use 2.png>
 Package pdftex.def Info: 2.png  used on input line 208.
 (pdftex.def)             Requested size: 271.7835pt x 160.1124pt.
- [5 <./1.png>]
-<3.png, id=166, 337.26pt x 406.51875pt>
+ [6 <./1.png>]
+<3.png, id=362, 337.26pt x 406.51875pt>
 File: 3.png Graphic file (type png)
 <use 3.png>
 Package pdftex.def Info: 3.png  used on input line 223.
@@ -927,54 +955,327 @@ Underfull \hbox (badness 10000) in paragraph at lines 228--231
 
  []
 
-[6 <./2.png> <./3.png>]
-<4.png, id=177, 445.665pt x 418.56375pt>
+[7 <./2.png> <./3.png>]
+<4.png, id=372, 445.665pt x 418.56375pt>
 File: 4.png Graphic file (type png)
 <use 4.png>
 Package pdftex.def Info: 4.png  used on input line 241.
 (pdftex.def)             Requested size: 210.83498pt x 198.0151pt.
-<5.png, id=178, 445.665pt x 418.56375pt>
+<5.png, id=373, 445.665pt x 418.56375pt>
 File: 5.png Graphic file (type png)
 <use 5.png>
 Package pdftex.def Info: 5.png  used on input line 248.
 (pdftex.def)             Requested size: 210.83498pt x 198.0151pt.
-<6.png, id=179, 445.665pt x 418.56375pt>
+<6.png, id=374, 445.665pt x 418.56375pt>
 File: 6.png Graphic file (type png)
 <use 6.png>
 Package pdftex.def Info: 6.png  used on input line 257.
 (pdftex.def)             Requested size: 210.83498pt x 198.0151pt.
- [7]
-<7.png, id=186, 445.665pt x 418.56375pt>
+ [8]
+<7.png, id=381, 445.665pt x 418.56375pt>
 File: 7.png Graphic file (type png)
 <use 7.png>
 Package pdftex.def Info: 7.png  used on input line 267.
 (pdftex.def)             Requested size: 210.83498pt x 198.0151pt.
- [8 <./4.png> <./5.png>]
-<8.png, id=196, 445.665pt x 418.56375pt>
+ [9 <./4.png> <./5.png>]
+<8.png, id=391, 445.665pt x 418.56375pt>
 File: 8.png Graphic file (type png)
 <use 8.png>
 Package pdftex.def Info: 8.png  used on input line 277.
 (pdftex.def)             Requested size: 210.83498pt x 198.0151pt.
- [9 <./6.png> <./7.png>] [10 <./8.png>] (./notes.aux)
+ [10 <./6.png> <./7.png>] [11 <./8.png>] [12]
+<one.png, id=423, 888.31876pt x 683.55376pt>
+File: one.png Graphic file (type png)
+<use one.png>
+Package pdftex.def Info: one.png  used on input line 349.
+(pdftex.def)             Requested size: 362.37569pt x 278.84035pt.
+<two.png, id=424, 644.4075pt x 675.52374pt>
+File: two.png Graphic file (type png)
+<use two.png>
+Package pdftex.def Info: two.png  used on input line 371.
+(pdftex.def)             Requested size: 226.48395pt x 237.41608pt.
+ [13 <./one.png>]
+<arc.png, id=435, 694.595pt x 402.50375pt>
+File: arc.png Graphic file (type png)
+<use arc.png>
+Package pdftex.def Info: arc.png  used on input line 378.
+(pdftex.def)             Requested size: 181.18439pt x 104.99243pt.
+<three.png, id=436, 685.56125pt x 665.48625pt>
+File: three.png Graphic file (type png)
+<use three.png>
+Package pdftex.def Info: three.png  used on input line 384.
+(pdftex.def)             Requested size: 226.48395pt x 219.85484pt.
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+Underfull \hbox (badness 10000) in paragraph at lines 389--391
+
+ []
+
+[14 <./two.png> <./arc.png> <./three.png>]
+<four.png, id=447, 1569.865pt x 823.075pt>
+File: four.png Graphic file (type png)
+<use four.png>
+Package pdftex.def Info: four.png  used on input line 399.
+(pdftex.def)             Requested size: 362.37569pt x 189.99402pt.
+<five.png, id=448, 946.53625pt x 629.35126pt>
+File: five.png Graphic file (type png)
+<use five.png>
+Package pdftex.def Info: five.png  used on input line 405.
+(pdftex.def)             Requested size: 362.37569pt x 240.94214pt.
+ [15 <./four.png> <./five.png>] [16] [17]
+Underfull \hbox (badness 10000) in paragraph at lines 476--478
+
+ []
+
+<six.png, id=478, 1196.47pt x 505.89pt>
+File: six.png Graphic file (type png)
+<use six.png>
+Package pdftex.def Info: six.png  used on input line 485.
+(pdftex.def)             Requested size: 362.37569pt x 153.21938pt.
+<seven.png, id=479, 943.525pt x 750.805pt>
+File: seven.png Graphic file (type png)
+<use seven.png>
+Package pdftex.def Info: seven.png  used on input line 495.
+(pdftex.def)             Requested size: 226.48395pt x 180.21979pt.
+[18 <./six.png>]
+<eight.png, id=487, 1215.54124pt x 500.87125pt>
+File: eight.png Graphic file (type png)
+<use eight.png>
+Package pdftex.def Info: eight.png  used on input line 517.
+(pdftex.def)             Requested size: 362.37569pt x 149.31483pt.
+ [19 <./seven.png> <./eight.png>]
+<nine.png, id=496, 797.98125pt x 347.2975pt>
+File: nine.png Graphic file (type png)
+<use nine.png>
+Package pdftex.def Info: nine.png  used on input line 536.
+(pdftex.def)             Requested size: 226.48395pt x 98.56746pt.
+<ten.png, id=497, 942.52126pt x 245.91875pt>
+File: ten.png Graphic file (type png)
+<use ten.png>
+Package pdftex.def Info: ten.png  used on input line 558.
+(pdftex.def)             Requested size: 226.48395pt x 59.09299pt.
+<eleven.png, id=498, 730.73pt x 717.68124pt>
+File: eleven.png Graphic file (type png)
+<use eleven.png>
+Package pdftex.def Info: eleven.png  used on input line 564.
+(pdftex.def)             Requested size: 226.48395pt x 222.43507pt.
+ [20 <./nine.png> <./ten.png>]
+<twelve.png, id=512, 1093.08376pt x 444.66125pt>
+File: twelve.png Graphic file (type png)
+<use twelve.png>
+Package pdftex.def Info: twelve.png  used on input line 579.
+(pdftex.def)             Requested size: 362.37569pt x 147.41037pt.
+ [21 <./eleven.png> <./twelve.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 602--603
+
+ []
+
+<thirteen.png, id=523, 234.8775pt x 196.735pt>
+File: thirteen.png Graphic file (type png)
+<use thirteen.png>
+Package pdftex.def Info: thirteen.png  used on input line 611.
+(pdftex.def)             Requested size: 90.5922pt x 75.87978pt.
+[22 <./thirteen.png>]
+<pop1.png, id=533, 826.08624pt x 719.68875pt>
+File: pop1.png Graphic file (type png)
+<use pop1.png>
+Package pdftex.def Info: pop1.png  used on input line 661.
+(pdftex.def)             Requested size: 226.48395pt x 197.30554pt.
+ [23]
+<pop2.png, id=550, 985.6825pt x 452.69125pt>
+File: pop2.png Graphic file (type png)
+<use pop2.png>
+Package pdftex.def Info: pop2.png  used on input line 668.
+(pdftex.def)             Requested size: 226.48395pt x 104.01318pt.
+<pop3.png, id=551, 918.43124pt x 343.2825pt>
+File: pop3.png Graphic file (type png)
+<use pop3.png>
+Package pdftex.def Info: pop3.png  used on input line 675.
+(pdftex.def)             Requested size: 226.48395pt x 84.65231pt.
+<zz.png, id=552, 316.18124pt x 443.6575pt>
+File: zz.png Graphic file (type png)
+<use zz.png>
+Package pdftex.def Info: zz.png  used on input line 684.
+(pdftex.def)             Requested size: 126.50226pt x 177.50046pt.
+ [24 <./pop1.png> <./pop2.png> <./pop3.png>]
+<f1.png, id=565, 705.63625pt x 633.36626pt>
+File: f1.png Graphic file (type png)
+<use f1.png>
+Package pdftex.def Info: f1.png  used on input line 698.
+(pdftex.def)             Requested size: 195.67905pt x 175.63074pt.
+<f2.png, id=566, 705.63625pt x 633.36626pt>
+File: f2.png Graphic file (type png)
+<use f2.png>
+Package pdftex.def Info: f2.png  used on input line 703.
+(pdftex.def)             Requested size: 195.67905pt x 175.63074pt.
+
+Underfull \hbox (badness 2828) in paragraph at lines 704--704
+[]\T1/qtm/m/n/10 Figure 28: |Par-tially Or-dered plan with On(B,C)
+ []
+
+<f3.png, id=567, 705.63625pt x 633.36626pt>
+File: f3.png Graphic file (type png)
+<use f3.png>
+Package pdftex.def Info: f3.png  used on input line 710.
+(pdftex.def)             Requested size: 195.67905pt x 175.63074pt.
+<f4.png, id=568, 705.63625pt x 633.36626pt>
+File: f4.png Graphic file (type png)
+<use f4.png>
+Package pdftex.def Info: f4.png  used on input line 715.
+(pdftex.def)             Requested size: 195.67905pt x 175.63074pt.
+[25 <./zz.png> <./f1.png> <./f2.png>]
+<hd.png, id=579, 897.3525pt x 525.965pt>
+File: hd.png Graphic file (type png)
+<use hd.png>
+Package pdftex.def Info: hd.png  used on input line 735.
+(pdftex.def)             Requested size: 362.37569pt x 212.39668pt.
+ [26 <./f3.png> <./f4.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 743--744
+
+ []
+
+[27 <./hd.png>]
+<plan/1.png, id=594, 1419.3025pt x 594.22pt>
+File: plan/1.png Graphic file (type png)
+<use plan/1.png>
+Package pdftex.def Info: plan/1.png  used on input line 771.
+(pdftex.def)             Requested size: 217.42265pt x 91.02417pt.
+<plan/2.png, id=595, 1454.43375pt x 756.8275pt>
+File: plan/2.png Graphic file (type png)
+<use plan/2.png>
+Package pdftex.def Info: plan/2.png  used on input line 776.
+(pdftex.def)             Requested size: 217.42265pt x 113.13812pt.
+<plan/3.png, id=596, 1454.43375pt x 756.8275pt>
+File: plan/3.png Graphic file (type png)
+<use plan/3.png>
+Package pdftex.def Info: plan/3.png  used on input line 784.
+(pdftex.def)             Requested size: 217.42265pt x 113.13812pt.
+<plan/4.png, id=597, 1454.43375pt x 756.8275pt>
+File: plan/4.png Graphic file (type png)
+<use plan/4.png>
+Package pdftex.def Info: plan/4.png  used on input line 789.
+(pdftex.def)             Requested size: 217.42265pt x 113.13812pt.
+<plan/5.png, id=598, 1454.43375pt x 756.8275pt>
+File: plan/5.png Graphic file (type png)
+<use plan/5.png>
+Package pdftex.def Info: plan/5.png  used on input line 796.
+(pdftex.def)             Requested size: 217.42265pt x 113.13812pt.
+<plan/6.png, id=599, 1454.43375pt x 756.8275pt>
+File: plan/6.png Graphic file (type png)
+<use plan/6.png>
+Package pdftex.def Info: plan/6.png  used on input line 801.
+(pdftex.def)             Requested size: 217.42265pt x 113.13812pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 805--807
+
+ []
+
+[28 <./plan/1.png> <./plan/2.png> <./plan/3.png> <./plan/4.png> <./plan/5.png> <./plan/6.png>]
+<monitor.png, id=615, 740.7675pt x 710.655pt>
+File: monitor.png Graphic file (type png)
+<use monitor.png>
+Package pdftex.def Info: monitor.png  used on input line 816.
+(pdftex.def)             Requested size: 362.37569pt x 347.64928pt.
+ [29 <./monitor.png>]
+<mycin.png, id=624, 1120.185pt x 660.4675pt>
+File: mycin.png Graphic file (type png)
+<use mycin.png>
+Package pdftex.def Info: mycin.png  used on input line 836.
+(pdftex.def)             Requested size: 362.37569pt x 213.66176pt.
+ [30 <./mycin.png>]
+Overfull \hbox (92.27597pt too wide) in paragraph at lines 848--856
+\T1/qtm/m/n/10 We have gram-mar for gen-er-at-ing sym-bol struc-tures of object-attribute-value triples $\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 o; a; v\OT1/lmr/m/n/10 )$ \T1/qtm/m/n/10 for ex-am-ple $\OT1/lmr/m/n/10 ([])$\T1/qtm/m/n/10 .
+ []
+
+
+Overfull \hbox (0.54803pt too wide) in paragraph at lines 871--873
+\T1/qtm/m/n/10 and then $\OML/lmm/m/it/10 C \OMS/lmsy/m/n/10 ! \OML/lmm/m/it/10 L$\T1/qtm/m/n/10 . Our facts are now $\OML/lmm/m/it/10 A; B; C; D; E; X; L$\T1/qtm/m/n/10 . We can now as-sert $\OML/lmm/m/it/10 Y$\T1/qtm/m/n/10 , so we have $\OML/lmm/m/it/10 A; B; C; D; E; X; L; Y$\T1/qtm/m/n/10 .
+ []
+
+[31] [32] [33] [34]
+<bay.png, id=672, 1201.48875pt x 628.3475pt>
+File: bay.png Graphic file (type png)
+<use bay.png>
+Package pdftex.def Info: bay.png  used on input line 997.
+(pdftex.def)             Requested size: 362.37569pt x 189.51242pt.
+<fac.png, id=673, 762.85pt x 327.2225pt>
+File: fac.png Graphic file (type png)
+<use fac.png>
+Package pdftex.def Info: fac.png  used on input line 1031.
+(pdftex.def)             Requested size: 271.7835pt x 116.57672pt.
+ [35 <./bay.png>]
+<fac2.png, id=683, 1227.58624pt x 415.5525pt>
+File: fac2.png Graphic file (type png)
+<use fac2.png>
+Package pdftex.def Info: fac2.png  used on input line 1038.
+(pdftex.def)             Requested size: 317.07614pt x 107.33092pt.
+<sum.png, id=684, 1227.58624pt x 415.5525pt>
+File: sum.png Graphic file (type png)
+<use sum.png>
+Package pdftex.def Info: sum.png  used on input line 1045.
+(pdftex.def)             Requested size: 362.37569pt x 122.66934pt.
+ [36 <./fac.png> <./fac2.png> <./sum.png>]
+<st.png, id=699, 823.075pt x 390.45876pt>
+File: st.png Graphic file (type png)
+<use st.png>
+Package pdftex.def Info: st.png  used on input line 1075.
+(pdftex.def)             Requested size: 362.37569pt x 171.90962pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1089--1090
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1086--1096
+
+ []
+
+[37 <./st.png>]
+<stt.png, id=707, 1470.49374pt x 791.95876pt>
+File: stt.png Graphic file (type png)
+<use stt.png>
+Package pdftex.def Info: stt.png  used on input line 1102.
+(pdftex.def)             Requested size: 362.37569pt x 195.16147pt.
+<markov.png, id=708, 1069.9975pt x 481.8pt>
+File: markov.png Graphic file (type png)
+<use markov.png>
+Package pdftex.def Info: markov.png  used on input line 1117.
+(pdftex.def)             Requested size: 337.33723pt x 151.90013pt.
+ [38 <./stt.png>] [39 <./markov.png>] [40]
+<s1.png, id=737, 1521.685pt x 315.1775pt>
+File: s1.png Graphic file (type png)
+<use s1.png>
+Package pdftex.def Info: s1.png  used on input line 1219.
+(pdftex.def)             Requested size: 362.37569pt x 75.05742pt.
+<s2.png, id=738, 1388.18625pt x 127.47626pt>
+File: s2.png Graphic file (type png)
+<use s2.png>
+Package pdftex.def Info: s2.png  used on input line 1225.
+(pdftex.def)             Requested size: 362.37569pt x 33.27725pt.
+<s3.png, id=739, 1510.64375pt x 766.865pt>
+File: s3.png Graphic file (type png)
+<use s3.png>
+Package pdftex.def Info: s3.png  used on input line 1231.
+(pdftex.def)             Requested size: 362.37569pt x 183.95775pt.
+ [41 <./s1.png> <./s2.png>] [42 <./s3.png>] (./notes.aux)
+
+LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `notes.out' has not changed.
-(rerunfilecheck)             Checksum: 96A73B2D9690EB8665E2ED260275D940;3273.
+(rerunfilecheck)             Checksum: B34D684A9045FFFF0BD0C46154FB7D29;8903.
  ) 
 Here is how much of TeX's memory you used:
- 29534 strings out of 478287
- 555015 string characters out of 5849289
- 1094673 words of memory out of 5000000
- 47135 multiletter control sequences out of 15000+600000
- 508306 words of font info for 55 fonts, out of 8000000 for 9000
+ 30203 strings out of 478287
+ 563730 string characters out of 5849289
+ 1100672 words of memory out of 5000000
+ 47573 multiletter control sequences out of 15000+600000
+ 511121 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,10n,131p,1007b,559s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ec.enc}</usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmb.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmr.pfb>
-Output written on notes.pdf (11 pages, 419629 bytes).
+ 99i,19n,131p,1007b,559s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ec.enc}{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ts1.enc}</usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi5.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr5.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy5.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmb.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmr.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmri.pfb>
+Output written on notes.pdf (43 pages, 9504696 bytes).
 PDF statistics:
- 260 PDF objects out of 1000 (max. 8388607)
- 215 compressed objects within 3 object streams
- 56 named destinations out of 1000 (max. 500000)
- 234 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 884 PDF objects out of 1000 (max. 8388607)
+ 702 compressed objects within 8 object streams
+ 252 named destinations out of 1000 (max. 500000)
+ 743 words of extra memory for PDF output out of 10000 (max. 10000000)
 

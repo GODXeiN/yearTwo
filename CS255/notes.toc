@@ -1,22 +1,60 @@
-\contentsline {section}{\numberline {1}Agents}{2}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Inputs to an agent}{2}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Dimensions of Complexity}{2}{subsection.1.2}%
-\contentsline {subsubsection}{\numberline {1.2.1}Modularity}{2}{subsubsection.1.2.1}%
-\contentsline {subsubsection}{\numberline {1.2.2}Planning Horizon}{3}{subsubsection.1.2.2}%
-\contentsline {subsubsection}{\numberline {1.2.3}Representation}{3}{subsubsection.1.2.3}%
-\contentsline {subsubsection}{\numberline {1.2.4}Learning from experience}{3}{subsubsection.1.2.4}%
-\contentsline {subsubsection}{\numberline {1.2.5}Uncertainty}{3}{subsubsection.1.2.5}%
-\contentsline {subsubsection}{\numberline {1.2.6}Sensing Uncertainty}{3}{subsubsection.1.2.6}%
-\contentsline {subsubsection}{\numberline {1.2.7}Effect Uncertainty}{3}{subsubsection.1.2.7}%
-\contentsline {subsubsection}{\numberline {1.2.8}Preferences}{3}{subsubsection.1.2.8}%
-\contentsline {subsubsection}{\numberline {1.2.9}Number of Agents}{3}{subsubsection.1.2.9}%
-\contentsline {subsubsection}{\numberline {1.2.10}Interaction}{3}{subsubsection.1.2.10}%
-\contentsline {section}{\numberline {2}Representation}{3}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Defining a solution}{4}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Decisions and outcome}{4}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Physical Symbol System Hypothesis}{4}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Knowledge and Symbol Levels}{4}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Agent System Architecture}{5}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}Controller}{5}{subsection.2.6}%
-\contentsline {subsection}{\numberline {2.7}Belief States}{5}{subsection.2.7}%
-\contentsline {subsection}{\numberline {2.8}Agent Types}{7}{subsection.2.8}%
+\contentsline {section}{\numberline {1}Agents}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Inputs to an agent}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Dimensions of Complexity}{3}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Modularity}{3}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}Planning Horizon}{4}{subsubsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.3}Representation}{4}{subsubsection.1.2.3}%
+\contentsline {subsubsection}{\numberline {1.2.4}Learning from experience}{4}{subsubsection.1.2.4}%
+\contentsline {subsubsection}{\numberline {1.2.5}Uncertainty}{4}{subsubsection.1.2.5}%
+\contentsline {subsubsection}{\numberline {1.2.6}Sensing Uncertainty}{4}{subsubsection.1.2.6}%
+\contentsline {subsubsection}{\numberline {1.2.7}Effect Uncertainty}{4}{subsubsection.1.2.7}%
+\contentsline {subsubsection}{\numberline {1.2.8}Preferences}{4}{subsubsection.1.2.8}%
+\contentsline {subsubsection}{\numberline {1.2.9}Number of Agents}{4}{subsubsection.1.2.9}%
+\contentsline {subsubsection}{\numberline {1.2.10}Interaction}{4}{subsubsection.1.2.10}%
+\contentsline {section}{\numberline {2}Representation}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Defining a solution}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Decisions and outcome}{5}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Physical Symbol System Hypothesis}{5}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Knowledge and Symbol Levels}{5}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Agent System Architecture}{6}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Controller}{6}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Belief States}{6}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Agent Types}{8}{subsection.2.8}%
+\contentsline {section}{\numberline {3}Search}{11}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Heuristic Depth-First Search}{11}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Greedy best-first search}{11}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Lowest-cost-first}{11}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}A* Search}{12}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Path Pruning}{12}{subsection.3.5}%
+\contentsline {section}{\numberline {4}Constraint Satisfaction Problems}{12}{section.4}%
+\contentsline {section}{\numberline {5}Local Search}{16}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Iterative Improvement Algorithms}{16}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Hill-Climbing}{16}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Local Search for CSP}{16}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Adversarial Search}{17}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Minimax}{17}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Alpha-Beta Pruning}{18}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Games with Chance}{18}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Monte Carlo Tree Search (MCTS)}{19}{subsection.6.4}%
+\contentsline {section}{\numberline {7}Planning with Certainty}{20}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Situation Calculus}{21}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Strips}{22}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Partially Ordered Plans}{23}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Extending the Language}{26}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}The Real World}{27}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}Monitoring}{29}{subsection.7.6}%
+\contentsline {section}{\numberline {8}Knowledge Representation}{29}{section.8}%
+\contentsline {subsection}{\numberline {8.1}What is knowledge?}{29}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Expert Systems}{30}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}MYCIN}{30}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Knowledge Representation}{31}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}Debugging}{32}{subsection.8.5}%
+\contentsline {section}{\numberline {9}Planning with Uncertainty (Bayesian AI)}{32}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Probability}{32}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Bayesian Belief Networks}{34}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Decision Making}{36}{subsection.9.3}%
+\contentsline {section}{\numberline {10}Reinforcement Learning}{38}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Non-Deterministic}{40}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}SARSA}{41}{subsection.10.2}%
+\contentsline {section}{\numberline {11}Multiagent Systems}{41}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Normal Form of a Game}{41}{subsection.11.1}%
