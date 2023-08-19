@@ -2,3 +2,23 @@
 \contentsline {subsection}{\numberline {1.1}Alphabet}{2}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Deterministic Final State Automata}{2}{subsection.1.2}%
 \contentsline {subsection}{\numberline {1.3}Languages}{4}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Operations on Regular Languages}{4}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Non-Deterministic Finite Automata (NFA)}{6}{subsection.1.5}%
+\contentsline {section}{\numberline {2}Regular Expressions}{8}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Definition}{8}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Conversion to NFA}{9}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Proving Regularity}{13}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Myhill-Nerode}{13}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Pumping Lemma}{14}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Grammars}{16}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Definition}{16}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Grammars and DFAs}{18}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Push Down Automaton}{18}{section.5}%
+\contentsline {subsection}{\numberline {5.1}CFG to PDA}{19}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}PDA to CFG}{20}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}String in Grammar}{21}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Pumping Lemma for CFL}{22}{subsection.5.4}%
+\contentsline {section}{\numberline {6}Turing Machines}{23}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Definition}{23}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Decidability}{23}{subsection.6.2}%
+\contentsline {section}{\numberline {7}Revision}{25}{section.7}%

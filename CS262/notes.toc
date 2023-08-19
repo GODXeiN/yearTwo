@@ -1,0 +1,7 @@
+\contentsline {section}{\numberline {1}Prolog}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Arithmetic}{2}{subsection.1.1}%
+\contentsline {section}{\numberline {2}Propositional Formulas}{2}{section.2}%
+\contentsline {section}{\numberline {3}Proof Systems}{8}{section.3}%
+\contentsline {section}{\numberline {4}Boolean Satisfiability Problem}{14}{section.4}%
+\contentsline {section}{\numberline {5}First Order Logic}{20}{section.5}%
+\contentsline {section}{\numberline {6}Program Verification}{24}{section.6}%

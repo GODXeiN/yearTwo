@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.30)  17 APR 2023 16:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.7.20)  16 AUG 2023 17:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -814,15 +814,15 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
 Package epstopdf Info: Source file: <crest_black.eps>
-(epstopdf)                    date: 2022-01-09 22:36:06
+(epstopdf)                    date: 2022-01-10 01:36:06
 (epstopdf)                    size: 71748 bytes
 (epstopdf)             Output file: <crest_black-eps-converted-to.pdf>
-(epstopdf)                    date: 2022-10-04 14:06:09
+(epstopdf)                    date: 2022-10-04 16:06:09
 (epstopdf)                    size: 20983 bytes
 (epstopdf)             Command: <repstopdf --outfile=crest_black-eps-converted-to.pdf crest_black.eps>
 (epstopdf)             \includegraphics on input line 104.
 Package epstopdf Info: Output file is already uptodate.
-<crest_black-eps-converted-to.pdf, id=175, 64.24pt x 80.3pt>
+<crest_black-eps-converted-to.pdf, id=220, 64.24pt x 80.3pt>
 File: crest_black-eps-converted-to.pdf Graphic file (type pdf)
 <use crest_black-eps-converted-to.pdf>
 Package pdftex.def Info: crest_black-eps-converted-to.pdf  used on input line 104.
@@ -859,15 +859,15 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
+)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.52 ...ne {9.3}Normalisation}{18}{subsection.9.3}
+                                                  % [1])
 \tf@toc=\write5
 \openout5 = `notes.toc'.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.112 	\newpage
-                [1]
+ [2]
 LaTeX Font Info:    Trying to load font information for TS1+qtm on input line 116.
  (/usr/share/texmf/tex/latex/tex-gyre/ts1qtm.fd
 File: ts1qtm.fd 2009/09/25 v1.2 font definition file for TS1/qtm
@@ -876,13 +876,13 @@ Overfull \hbox (11.27307pt too wide) in paragraph at lines 147--161
 \T1/qtm/m/n/10 A do-main has a log-i-cal def-i-ni-tion in the real world. A do-main also has data for-mat. For ex-am-ple, USA$[]$phone$[]$numbers
  []
 
-[2] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+[3] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 163.
  (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [3] [4]
+) [4] [5]
 Overfull \hbox (12.4517pt too wide) detected at line 258
 []
  []
@@ -892,42 +892,58 @@ Overfull \hbox (35.4432pt too wide) detected at line 262
 []
  []
 
-[5] [6]
+[6] [7]
 Underfull \hbox (badness 10000) in paragraph at lines 370--371
 
  []
 
-[7] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+[8] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
-) [8] [9] [10]
-<cross.png, id=368, 590.205pt x 356.33125pt>
+) [9] [10] [11]
+<cross.png, id=428, 590.205pt x 356.33125pt>
 File: cross.png Graphic file (type png)
 <use cross.png>
 Package pdftex.def Info: cross.png  used on input line 534.
 (pdftex.def)             Requested size: 362.37569pt x 218.78627pt.
- [11]
-<njoin.png, id=393, 297.11pt x 260.975pt>
+ [12]
+<njoin.png, id=453, 297.11pt x 260.975pt>
 File: njoin.png Graphic file (type png)
 <use njoin.png>
 Package pdftex.def Info: njoin.png  used on input line 555.
 (pdftex.def)             Requested size: 203.83417pt x 179.04953pt.
- [12 <./cross.png> <./njoin.png>] [13] (./notes.aux)
+ [13 <./cross.png> <./njoin.png>] [14] [15]
+<fig.png, id=480, 751.80875pt x 627.34375pt>
+File: fig.png Graphic file (type png)
+<use fig.png>
+Package pdftex.def Info: fig.png  used on input line 669.
+(pdftex.def)             Requested size: 407.66833pt x 340.18687pt.
+ [16]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 698.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+) [17 <./fig.png>] [18]
+<one.png, id=524, 953.5625pt x 282.05376pt>
+File: one.png Graphic file (type png)
+<use one.png>
+Package pdftex.def Info: one.png  used on input line 776.
+(pdftex.def)             Requested size: 253.00453pt x 74.83426pt.
+ [19] [20 <./one.png>] (./notes.aux)
 Package rerunfilecheck Info: File `notes.out' has not changed.
-(rerunfilecheck)             Checksum: E86DBB2C69895968DCA7B821545E96C5;5691.
+(rerunfilecheck)             Checksum: 75F3666E892985AD45A75A758DB68CF5;7156.
  ) 
 Here is how much of TeX's memory you used:
- 30248 strings out of 478287
- 562901 string characters out of 5849289
- 1316457 words of memory out of 5000000
- 47737 multiletter control sequences out of 15000+600000
- 511796 words of font info for 58 fonts, out of 8000000 for 9000
+ 30400 strings out of 478287
+ 564951 string characters out of 5849289
+ 1317066 words of memory out of 5000000
+ 47818 multiletter control sequences out of 15000+600000
+ 512504 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,16n,131p,584b,1987s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ec.enc}</usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmb.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmr.pfb>
-Output written on notes.pdf (14 pages, 310552 bytes).
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ec.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi5.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr5.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmb.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmr.pfb>
+Output written on notes.pdf (21 pages, 865832 bytes).
 PDF statistics:
- 492 PDF objects out of 1000 (max. 8388607)
- 446 compressed objects within 5 object streams
- 165 named destinations out of 1000 (max. 500000)
- 364 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 655 PDF objects out of 1000 (max. 8388607)
+ 591 compressed objects within 6 object streams
+ 228 named destinations out of 1000 (max. 500000)
+ 462 words of extra memory for PDF output out of 10000 (max. 10000000)
 

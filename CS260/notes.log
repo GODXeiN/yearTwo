@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.8.30)  28 NOV 2022 14:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.7.20)  9 AUG 2023 02:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -822,7 +822,7 @@ Package epstopdf Info: Source file: <crest_black.eps>
 (epstopdf)             Command: <repstopdf --outfile=crest_black-eps-converted-to.pdf crest_black.eps>
 (epstopdf)             \includegraphics on input line 105.
 Package epstopdf Info: Output file is already uptodate.
-<crest_black-eps-converted-to.pdf, id=167, 64.24pt x 80.3pt>
+<crest_black-eps-converted-to.pdf, id=191, 64.24pt x 80.3pt>
 File: crest_black-eps-converted-to.pdf Graphic file (type pdf)
 <use crest_black-eps-converted-to.pdf>
 Package pdftex.def Info: crest_black-eps-converted-to.pdf  used on input line 105.
@@ -859,18 +859,18 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
+)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.42 ...mberline {23}Network Flow}{20}{section.23}
+                                                  % [1])
 \tf@toc=\write5
 \openout5 = `notes.toc'.
 
 LaTeX Font Info:    Trying to load font information for TS1+qtm on input line 116.
  (/usr/share/texmf/tex/latex/tex-gyre/ts1qtm.fd
 File: ts1qtm.fd 2009/09/25 v1.2 font definition file for TS1/qtm
-)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.117 		\item 2
-               020 - questions 1a, 5d-e, 6, 7a-c, 8c-d [1] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
 File: lstlang2.sty 2020/03/24 1.8d listings language file
@@ -910,7 +910,41 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 141.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 141.
- [2] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+ [2]
+
+./notes.tex:165: LaTeX Error: \begin{thm} on input line 161 ended by \end{proof}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.165 		\end{proof}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./notes.tex:166: LaTeX Error: \begin{document} ended by \end{thm}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.166 	\end{thm}
+                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./notes.tex:166: Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.166 	\end{thm}
+                
+Things are pretty mixed up, but I think the worst is over.
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
 File: lstlang2.sty 2020/03/24 1.8d listings language file
@@ -918,26 +952,26 @@ File: lstlang2.sty 2020/03/24 1.8d listings language file
 File: lstlang3.sty 2020/03/24 1.8d listings language file
 )
 
-./notes.tex:176: Package Listings Error: Couldn't load requested language.
+./notes.tex:175: Package Listings Error: Couldn't load requested language.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.176 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.175 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The following languages weren't loadable:
     ,pseudocode$
 This may cause errors in the sequel.
 
 
-./notes.tex:176: Package Listings Error: language pseudocode undefined.
+./notes.tex:175: Package Listings Error: language pseudocode undefined.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.176 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.175 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The language is not loadable. Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -950,26 +984,26 @@ File: lstlang2.sty 2020/03/24 1.8d listings language file
 File: lstlang3.sty 2020/03/24 1.8d listings language file
 )
 
-./notes.tex:186: Package Listings Error: Couldn't load requested language.
+./notes.tex:185: Package Listings Error: Couldn't load requested language.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.186 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.185 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The following languages weren't loadable:
     ,pseudocode$
 This may cause errors in the sequel.
 
 
-./notes.tex:186: Package Listings Error: language pseudocode undefined.
+./notes.tex:185: Package Listings Error: language pseudocode undefined.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.186 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.185 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The language is not loadable. Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -982,26 +1016,26 @@ File: lstlang2.sty 2020/03/24 1.8d listings language file
 File: lstlang3.sty 2020/03/24 1.8d listings language file
 )
 
-./notes.tex:202: Package Listings Error: Couldn't load requested language.
+./notes.tex:201: Package Listings Error: Couldn't load requested language.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.202 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.201 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The following languages weren't loadable:
     ,pseudocode$
 This may cause errors in the sequel.
 
 
-./notes.tex:202: Package Listings Error: language pseudocode undefined.
+./notes.tex:201: Package Listings Error: language pseudocode undefined.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.202 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.201 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The language is not loadable. Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1014,26 +1048,26 @@ File: lstlang2.sty 2020/03/24 1.8d listings language file
 File: lstlang3.sty 2020/03/24 1.8d listings language file
 )
 
-./notes.tex:211: Package Listings Error: Couldn't load requested language.
+./notes.tex:210: Package Listings Error: Couldn't load requested language.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.211 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.210 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The following languages weren't loadable:
     ,pseudocode$
 This may cause errors in the sequel.
 
 
-./notes.tex:211: Package Listings Error: language pseudocode undefined.
+./notes.tex:210: Package Listings Error: language pseudocode undefined.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.211 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.210 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The language is not loadable. Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1046,26 +1080,26 @@ File: lstlang2.sty 2020/03/24 1.8d listings language file
 File: lstlang3.sty 2020/03/24 1.8d listings language file
 )
 
-./notes.tex:232: Package Listings Error: Couldn't load requested language.
+./notes.tex:231: Package Listings Error: Couldn't load requested language.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.232 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.231 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The following languages weren't loadable:
     ,pseudocode$
 This may cause errors in the sequel.
 
 
-./notes.tex:232: Package Listings Error: language pseudocode undefined.
+./notes.tex:231: Package Listings Error: language pseudocode undefined.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.232 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.231 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The language is not loadable. Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1078,37 +1112,37 @@ File: lstlang2.sty 2020/03/24 1.8d listings language file
 File: lstlang3.sty 2020/03/24 1.8d listings language file
 )
 
-./notes.tex:239: Package Listings Error: Couldn't load requested language.
+./notes.tex:238: Package Listings Error: Couldn't load requested language.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.239 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.238 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The following languages weren't loadable:
     ,pseudocode$
 This may cause errors in the sequel.
 
 
-./notes.tex:239: Package Listings Error: language pseudocode undefined.
+./notes.tex:238: Package Listings Error: language pseudocode undefined.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.239 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.238 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The language is not loadable. Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 259--260
+Underfull \hbox (badness 10000) in paragraph at lines 258--259
 
  []
 
 
-Overfull \hbox (12.3347pt too wide) detected at line 262
+Overfull \hbox (12.3347pt too wide) detected at line 261
 []
  []
 
@@ -1120,26 +1154,26 @@ File: lstlang2.sty 2020/03/24 1.8d listings language file
 File: lstlang3.sty 2020/03/24 1.8d listings language file
 )
 
-./notes.tex:277: Package Listings Error: Couldn't load requested language.
+./notes.tex:276: Package Listings Error: Couldn't load requested language.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.277 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.276 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The following languages weren't loadable:
     ,pseudocode$
 This may cause errors in the sequel.
 
 
-./notes.tex:277: Package Listings Error: language pseudocode undefined.
+./notes.tex:276: Package Listings Error: language pseudocode undefined.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.277 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.276 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The language is not loadable. Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1152,26 +1186,26 @@ File: lstlang2.sty 2020/03/24 1.8d listings language file
 File: lstlang3.sty 2020/03/24 1.8d listings language file
 )
 
-./notes.tex:293: Package Listings Error: Couldn't load requested language.
+./notes.tex:292: Package Listings Error: Couldn't load requested language.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.293 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.292 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The following languages weren't loadable:
     ,pseudocode$
 This may cause errors in the sequel.
 
 
-./notes.tex:293: Package Listings Error: language pseudocode undefined.
+./notes.tex:292: Package Listings Error: language pseudocode undefined.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.293 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.292 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The language is not loadable. Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1184,26 +1218,26 @@ File: lstlang2.sty 2020/03/24 1.8d listings language file
 File: lstlang3.sty 2020/03/24 1.8d listings language file
 )
 
-./notes.tex:301: Package Listings Error: Couldn't load requested language.
+./notes.tex:300: Package Listings Error: Couldn't load requested language.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.301 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.300 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The following languages weren't loadable:
     ,pseudocode$
 This may cause errors in the sequel.
 
 
-./notes.tex:301: Package Listings Error: language pseudocode undefined.
+./notes.tex:300: Package Listings Error: language pseudocode undefined.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.301 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.300 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The language is not loadable. Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1216,31 +1250,31 @@ File: lstlang2.sty 2020/03/24 1.8d listings language file
 File: lstlang3.sty 2020/03/24 1.8d listings language file
 )
 
-./notes.tex:306: Package Listings Error: Couldn't load requested language.
+./notes.tex:305: Package Listings Error: Couldn't load requested language.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.306 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.305 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The following languages weren't loadable:
     ,pseudocode$
 This may cause errors in the sequel.
 
 
-./notes.tex:306: Package Listings Error: language pseudocode undefined.
+./notes.tex:305: Package Listings Error: language pseudocode undefined.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.306 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.305 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The language is not loadable. Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[6] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
 File: lstlang2.sty 2020/03/24 1.8d listings language file
@@ -1248,32 +1282,33 @@ File: lstlang2.sty 2020/03/24 1.8d listings language file
 File: lstlang3.sty 2020/03/24 1.8d listings language file
 )
 
-./notes.tex:311: Package Listings Error: Couldn't load requested language.
+./notes.tex:310: Package Listings Error: Couldn't load requested language.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.311 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.310 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The following languages weren't loadable:
     ,pseudocode$
 This may cause errors in the sequel.
 
 
-./notes.tex:311: Package Listings Error: language pseudocode undefined.
+./notes.tex:310: Package Listings Error: language pseudocode undefined.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.311 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.310 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The language is not loadable. Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-./notes.tex:319: Undefined control sequence.
-l.319 			A cut set for set of vertices $S\neq \var
+[6]
+./notes.tex:318: Undefined control sequence.
+l.318 			A cut set for set of vertices $S\neq \var
                                                   \neghing$ and $S \not\subs...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1281,8 +1316,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./notes.tex:319: Undefined control sequence.
-l.319 ...t for set of vertices $S\neq \var\neghing
+./notes.tex:318: Undefined control sequence.
+l.318 ...t for set of vertices $S\neq \var\neghing
                                                   $ and $S \not\subseteq$, w...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1291,7 +1326,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 319--320
+Underfull \hbox (badness 10000) in paragraph at lines 318--319
 
  []
 
@@ -1303,26 +1338,26 @@ File: lstlang2.sty 2020/03/24 1.8d listings language file
 File: lstlang3.sty 2020/03/24 1.8d listings language file
 )
 
-./notes.tex:334: Package Listings Error: Couldn't load requested language.
+./notes.tex:333: Package Listings Error: Couldn't load requested language.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.334 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.333 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The following languages weren't loadable:
     ,pseudocode$
 This may cause errors in the sequel.
 
 
-./notes.tex:334: Package Listings Error: language pseudocode undefined.
+./notes.tex:333: Package Listings Error: language pseudocode undefined.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.334 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.333 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The language is not loadable. Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1335,31 +1370,31 @@ File: lstlang2.sty 2020/03/24 1.8d listings language file
 File: lstlang3.sty 2020/03/24 1.8d listings language file
 )
 
-./notes.tex:339: Package Listings Error: Couldn't load requested language.
+./notes.tex:338: Package Listings Error: Couldn't load requested language.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.339 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.338 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The following languages weren't loadable:
     ,pseudocode$
 This may cause errors in the sequel.
 
 
-./notes.tex:339: Package Listings Error: language pseudocode undefined.
+./notes.tex:338: Package Listings Error: language pseudocode undefined.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.339 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.338 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The language is not loadable. Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[7] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
 File: lstlang2.sty 2020/03/24 1.8d listings language file
@@ -1367,36 +1402,37 @@ File: lstlang2.sty 2020/03/24 1.8d listings language file
 File: lstlang3.sty 2020/03/24 1.8d listings language file
 )
 
-./notes.tex:371: Package Listings Error: Couldn't load requested language.
+./notes.tex:370: Package Listings Error: Couldn't load requested language.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.371 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.370 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The following languages weren't loadable:
     ,pseudocode$
 This may cause errors in the sequel.
 
 
-./notes.tex:371: Package Listings Error: language pseudocode undefined.
+./notes.tex:370: Package Listings Error: language pseudocode undefined.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.371 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.370 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The language is not loadable. Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-<points.png, id=357, 1018.80624pt x 606.265pt>
+[7]
+<points.png, id=392, 1018.80624pt x 606.265pt>
 File: points.png Graphic file (type png)
 <use points.png>
-Package pdftex.def Info: points.png  used on input line 382.
+Package pdftex.def Info: points.png  used on input line 381.
 (pdftex.def)             Requested size: 271.7835pt x 161.73256pt.
-[8 <./points.png>] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
 File: lstlang2.sty 2020/03/24 1.8d listings language file
@@ -1404,36 +1440,36 @@ File: lstlang2.sty 2020/03/24 1.8d listings language file
 File: lstlang3.sty 2020/03/24 1.8d listings language file
 )
 
-./notes.tex:393: Package Listings Error: Couldn't load requested language.
+./notes.tex:392: Package Listings Error: Couldn't load requested language.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.393 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.392 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The following languages weren't loadable:
     ,pseudocode$
 This may cause errors in the sequel.
 
 
-./notes.tex:393: Package Listings Error: language pseudocode undefined.
+./notes.tex:392: Package Listings Error: language pseudocode undefined.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.393 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.392 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The language is not loadable. Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-<tree.png, id=373, 317.185pt x 160.6pt>
+<tree.png, id=394, 317.185pt x 160.6pt>
 File: tree.png Graphic file (type png)
 <use tree.png>
-Package pdftex.def Info: tree.png  used on input line 419.
+Package pdftex.def Info: tree.png  used on input line 418.
 (pdftex.def)             Requested size: 271.7835pt x 137.62318pt.
-[9 <./tree.png>] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+[8 <./points.png>] [9 <./tree.png>] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
 File: lstlang2.sty 2020/03/24 1.8d listings language file
@@ -1441,26 +1477,58 @@ File: lstlang2.sty 2020/03/24 1.8d listings language file
 File: lstlang3.sty 2020/03/24 1.8d listings language file
 )
 
-./notes.tex:466: Package Listings Error: Couldn't load requested language.
+./notes.tex:465: Package Listings Error: Couldn't load requested language.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.466 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.465 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The following languages weren't loadable:
     ,pseudocode$
 This may cause errors in the sequel.
 
 
-./notes.tex:466: Package Listings Error: language pseudocode undefined.
+./notes.tex:465: Package Listings Error: language pseudocode undefined.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.466 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.465 ...tnumber = last , escapeinside={(*@}{@*)}]
+                                                  
+The language is not loadable. Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2020/03/24 1.8d listings language file
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang3.sty
+File: lstlang3.sty 2020/03/24 1.8d listings language file
+)
+
+./notes.tex:486: Package Listings Error: Couldn't load requested language.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.486 ...tnumber = last , escapeinside={(*@}{@*)}]
+                                                  
+The following languages weren't loadable:
+    ,pseudocode$
+This may cause errors in the sequel.
+
+
+./notes.tex:486: Package Listings Error: language pseudocode undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.486 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The language is not loadable. Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1473,69 +1541,37 @@ File: lstlang2.sty 2020/03/24 1.8d listings language file
 File: lstlang3.sty 2020/03/24 1.8d listings language file
 )
 
-./notes.tex:487: Package Listings Error: Couldn't load requested language.
+./notes.tex:517: Package Listings Error: Couldn't load requested language.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.487 ...tnumber = last , escapeinside={(*@}{@*)}]
-                                                  
-The following languages weren't loadable:
-    ,pseudocode$
-This may cause errors in the sequel.
-
-
-./notes.tex:487: Package Listings Error: language pseudocode undefined.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.487 ...tnumber = last , escapeinside={(*@}{@*)}]
-                                                  
-The language is not loadable. Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
-) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
-File: lstlang2.sty 2020/03/24 1.8d listings language file
-) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang3.sty
-File: lstlang3.sty 2020/03/24 1.8d listings language file
-)
-
-./notes.tex:518: Package Listings Error: Couldn't load requested language.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.518 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.517 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The following languages weren't loadable:
     ,psuedocode$
 This may cause errors in the sequel.
 
 
-./notes.tex:518: Package Listings Error: language psuedocode undefined.
+./notes.tex:517: Package Listings Error: language psuedocode undefined.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.518 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.517 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The language is not loadable. Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Overfull \hbox (48.3934pt too wide) in paragraph at lines 523--524
+Overfull \hbox (48.3934pt too wide) in paragraph at lines 522--523
 \T1/qtm/m/n/10 If $\OML/lmm/m/it/10 W$ \T1/qtm/m/n/10 is rep-re-sented in bi-na-ry/dec-i-mal, we have size of rep-re-sen-ta-tion of $\OML/lmm/m/it/10 W$ \T1/qtm/m/n/10 as $[][] \OML/lmm/m/it/10 W$\T1/qtm/m/n/10 . How-ever, $\OML/lmm/m/it/10 W$ \T1/qtm/m/n/10 is $\OT1/lmr/m/n/10 
  []$\T1/qtm/m/n/10 .
  []
 
-[11] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
 File: lstlang2.sty 2020/03/24 1.8d listings language file
@@ -1543,36 +1579,37 @@ File: lstlang2.sty 2020/03/24 1.8d listings language file
 File: lstlang3.sty 2020/03/24 1.8d listings language file
 )
 
-./notes.tex:572: Package Listings Error: Couldn't load requested language.
+./notes.tex:571: Package Listings Error: Couldn't load requested language.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.572 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.571 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The following languages weren't loadable:
     ,pseudocode$
 This may cause errors in the sequel.
 
 
-./notes.tex:572: Package Listings Error: language pseudocode undefined.
+./notes.tex:571: Package Listings Error: language pseudocode undefined.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.572 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.571 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The language is not loadable. Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-<diagram.png, id=412, 309.155pt x 298.11375pt>
+[11]
+<diagram.png, id=446, 309.155pt x 298.11375pt>
 File: diagram.png Graphic file (type png)
 <use diagram.png>
-Package pdftex.def Info: diagram.png  used on input line 603.
+Package pdftex.def Info: diagram.png  used on input line 602.
 (pdftex.def)             Requested size: 158.54152pt x 152.88208pt.
-[12] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+ [12 <./diagram.png>] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
 File: lstlang2.sty 2020/03/24 1.8d listings language file
@@ -1580,36 +1617,36 @@ File: lstlang2.sty 2020/03/24 1.8d listings language file
 File: lstlang3.sty 2020/03/24 1.8d listings language file
 )
 
-./notes.tex:631: Package Listings Error: Couldn't load requested language.
+./notes.tex:630: Package Listings Error: Couldn't load requested language.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.630 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The following languages weren't loadable:
     ,pseudocode$
 This may cause errors in the sequel.
 
 
-./notes.tex:631: Package Listings Error: language pseudocode undefined.
+./notes.tex:630: Package Listings Error: language pseudocode undefined.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.631 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.630 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The language is not loadable. Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-<trees.png, id=429, 534.99875pt x 269.005pt>
+<trees.png, id=461, 534.99875pt x 269.005pt>
 File: trees.png Graphic file (type png)
 <use trees.png>
-Package pdftex.def Info: trees.png  used on input line 646.
+Package pdftex.def Info: trees.png  used on input line 645.
 (pdftex.def)             Requested size: 362.37569pt x 182.21497pt.
-[13 <./diagram.png>] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+[13 <./trees.png>] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
 File: lstlang2.sty 2020/03/24 1.8d listings language file
@@ -1617,26 +1654,26 @@ File: lstlang2.sty 2020/03/24 1.8d listings language file
 File: lstlang3.sty 2020/03/24 1.8d listings language file
 )
 
-./notes.tex:658: Package Listings Error: Couldn't load requested language.
+./notes.tex:657: Package Listings Error: Couldn't load requested language.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.658 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.657 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The following languages weren't loadable:
     ,pseudocode$
 This may cause errors in the sequel.
 
 
-./notes.tex:658: Package Listings Error: language pseudocode undefined.
+./notes.tex:657: Package Listings Error: language pseudocode undefined.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.658 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.657 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The language is not loadable. Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1649,31 +1686,31 @@ File: lstlang2.sty 2020/03/24 1.8d listings language file
 File: lstlang3.sty 2020/03/24 1.8d listings language file
 )
 
-./notes.tex:664: Package Listings Error: Couldn't load requested language.
+./notes.tex:663: Package Listings Error: Couldn't load requested language.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.664 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.663 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The following languages weren't loadable:
     ,pseudocode$
 This may cause errors in the sequel.
 
 
-./notes.tex:664: Package Listings Error: language pseudocode undefined.
+./notes.tex:663: Package Listings Error: language pseudocode undefined.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.664 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.663 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The language is not loadable. Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[14 <./trees.png>] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
 File: lstlang2.sty 2020/03/24 1.8d listings language file
@@ -1681,26 +1718,26 @@ File: lstlang2.sty 2020/03/24 1.8d listings language file
 File: lstlang3.sty 2020/03/24 1.8d listings language file
 )
 
-./notes.tex:691: Package Listings Error: Couldn't load requested language.
+./notes.tex:690: Package Listings Error: Couldn't load requested language.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.691 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.690 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The following languages weren't loadable:
     ,psuedocode$
 This may cause errors in the sequel.
 
 
-./notes.tex:691: Package Listings Error: language psuedocode undefined.
+./notes.tex:690: Package Listings Error: language psuedocode undefined.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.691 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.690 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The language is not loadable. Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1713,26 +1750,58 @@ File: lstlang2.sty 2020/03/24 1.8d listings language file
 File: lstlang3.sty 2020/03/24 1.8d listings language file
 )
 
-./notes.tex:697: Package Listings Error: Couldn't load requested language.
+./notes.tex:696: Package Listings Error: Couldn't load requested language.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.697 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.696 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The following languages weren't loadable:
     ,pseudocode$
 This may cause errors in the sequel.
 
 
-./notes.tex:697: Package Listings Error: language pseudocode undefined.
+./notes.tex:696: Package Listings Error: language pseudocode undefined.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.697 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.696 ...tnumber = last , escapeinside={(*@}{@*)}]
+                                                  
+The language is not loadable. Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[14] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2020/03/24 1.8d listings language file
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang3.sty
+File: lstlang3.sty 2020/03/24 1.8d listings language file
+)
+
+./notes.tex:717: Package Listings Error: Couldn't load requested language.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.717 ...tnumber = last , escapeinside={(*@}{@*)}]
+                                                  
+The following languages weren't loadable:
+    ,psuedocode$
+This may cause errors in the sequel.
+
+
+./notes.tex:717: Package Listings Error: language psuedocode undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.717 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The language is not loadable. Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1745,26 +1814,26 @@ File: lstlang2.sty 2020/03/24 1.8d listings language file
 File: lstlang3.sty 2020/03/24 1.8d listings language file
 )
 
-./notes.tex:718: Package Listings Error: Couldn't load requested language.
+./notes.tex:722: Package Listings Error: Couldn't load requested language.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.718 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.722 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The following languages weren't loadable:
     ,psuedocode$
 This may cause errors in the sequel.
 
 
-./notes.tex:718: Package Listings Error: language psuedocode undefined.
+./notes.tex:722: Package Listings Error: language psuedocode undefined.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.718 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.722 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The language is not loadable. Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1777,90 +1846,26 @@ File: lstlang2.sty 2020/03/24 1.8d listings language file
 File: lstlang3.sty 2020/03/24 1.8d listings language file
 )
 
-./notes.tex:723: Package Listings Error: Couldn't load requested language.
+./notes.tex:757: Package Listings Error: Couldn't load requested language.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.723 ...tnumber = last , escapeinside={(*@}{@*)}]
-                                                  
-The following languages weren't loadable:
-    ,psuedocode$
-This may cause errors in the sequel.
-
-
-./notes.tex:723: Package Listings Error: language psuedocode undefined.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.723 ...tnumber = last , escapeinside={(*@}{@*)}]
-                                                  
-The language is not loadable. Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
-) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
-File: lstlang2.sty 2020/03/24 1.8d listings language file
-) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang3.sty
-File: lstlang3.sty 2020/03/24 1.8d listings language file
-)
-
-./notes.tex:758: Package Listings Error: Couldn't load requested language.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.758 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.757 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The following languages weren't loadable:
     ,pseudocode$
 This may cause errors in the sequel.
 
 
-./notes.tex:758: Package Listings Error: language pseudocode undefined.
+./notes.tex:757: Package Listings Error: language pseudocode undefined.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.758 ...tnumber = last , escapeinside={(*@}{@*)}]
-                                                  
-The language is not loadable. Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[16] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
-) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
-File: lstlang2.sty 2020/03/24 1.8d listings language file
-) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang3.sty
-File: lstlang3.sty 2020/03/24 1.8d listings language file
-)
-
-./notes.tex:773: Package Listings Error: Couldn't load requested language.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.773 ...tnumber = last , escapeinside={(*@}{@*)}]
-                                                  
-The following languages weren't loadable:
-    ,psuedocode$
-This may cause errors in the sequel.
-
-
-./notes.tex:773: Package Listings Error: language psuedocode undefined.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.773 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.757 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The language is not loadable. Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1873,47 +1878,179 @@ File: lstlang2.sty 2020/03/24 1.8d listings language file
 File: lstlang3.sty 2020/03/24 1.8d listings language file
 )
 
-./notes.tex:781: Package Listings Error: Couldn't load requested language.
+./notes.tex:772: Package Listings Error: Couldn't load requested language.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.781 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.772 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The following languages weren't loadable:
     ,psuedocode$
 This may cause errors in the sequel.
 
 
-./notes.tex:781: Package Listings Error: language psuedocode undefined.
+./notes.tex:772: Package Listings Error: language psuedocode undefined.
 
 See the Listings package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.781 ...tnumber = last , escapeinside={(*@}{@*)}]
+l.772 ...tnumber = last , escapeinside={(*@}{@*)}]
                                                   
 The language is not loadable. Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[17] [18] (./notes.aux)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2020/03/24 1.8d listings language file
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang3.sty
+File: lstlang3.sty 2020/03/24 1.8d listings language file
+)
+
+./notes.tex:780: Package Listings Error: Couldn't load requested language.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.780 ...tnumber = last , escapeinside={(*@}{@*)}]
+                                                  
+The following languages weren't loadable:
+    ,psuedocode$
+This may cause errors in the sequel.
+
+
+./notes.tex:780: Package Listings Error: language psuedocode undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.780 ...tnumber = last , escapeinside={(*@}{@*)}]
+                                                  
+The language is not loadable. Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[16] [17]
+<one.png, id=543, 353.32pt x 151.56625pt>
+File: one.png Graphic file (type png)
+<use one.png>
+Package pdftex.def Info: one.png  used on input line 866.
+(pdftex.def)             Requested size: 362.37569pt x 155.45354pt.
+ [18 <./one.png>] [19]
+Underfull \hbox (badness 10000) in paragraph at lines 961--963
+
+ []
+
+<two.png, id=573, 379.4175pt x 221.82875pt>
+File: two.png Graphic file (type png)
+<use two.png>
+Package pdftex.def Info: two.png  used on input line 971.
+(pdftex.def)             Requested size: 271.7835pt x 158.90082pt.
+[20 <./two.png>] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2020/03/24 1.8d listings language file
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang3.sty
+File: lstlang3.sty 2020/03/24 1.8d listings language file
+)
+
+./notes.tex:985: Package Listings Error: Couldn't load requested language.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.985 ...tnumber = last , escapeinside={(*@}{@*)}]
+                                                  
+The following languages weren't loadable:
+    ,pseudo$
+This may cause errors in the sequel.
+
+
+./notes.tex:985: Package Listings Error: language pseudo undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.985 ...tnumber = last , escapeinside={(*@}{@*)}]
+                                                  
+The language is not loadable. Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 996--997
+
+ []
+
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 1043--1046
+
+ []
+
+<three.png, id=608, 345.29pt x 127.47626pt>
+File: three.png Graphic file (type png)
+<use three.png>
+Package pdftex.def Info: three.png  used on input line 1070.
+(pdftex.def)             Requested size: 226.48395pt x 83.61523pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1065--1073
+
+ []
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2020/03/24 1.8d listings language file
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang3.sty
+File: lstlang3.sty 2020/03/24 1.8d listings language file
+)
+
+./notes.tex:1076: Package Listings Error: Couldn't load requested language.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1076 ...number = last , escapeinside={(*@}{@*)}]
+                                                  
+The following languages weren't loadable:
+    ,pseudo$
+This may cause errors in the sequel.
+
+
+./notes.tex:1076: Package Listings Error: language pseudo undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1076 ...number = last , escapeinside={(*@}{@*)}]
+                                                  
+The language is not loadable. Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[22 <./three.png>] [23] (./notes.aux)
 Package rerunfilecheck Info: File `notes.out' has not changed.
-(rerunfilecheck)             Checksum: DDF78FDB210D3FE25F78E1135082FA2D;6107.
+(rerunfilecheck)             Checksum: 0E71FD058D3D1A3B106ECB51DAA179A5;6957.
  ) 
 Here is how much of TeX's memory you used:
- 30865 strings out of 478287
- 578131 string characters out of 5849289
- 1219708 words of memory out of 5000000
- 48077 multiletter control sequences out of 15000+600000
+ 30974 strings out of 478287
+ 579956 string characters out of 5849289
+ 1237794 words of memory out of 5000000
+ 48113 multiletter control sequences out of 15000+600000
  532360 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,19n,131p,925b,2066s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ec.enc}{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ts1.enc}</usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi5.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi9.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr5.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmb.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmr.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmri.pfb>
-Output written on notes.pdf (19 pages, 732176 bytes).
+ 99i,19n,131p,925b,2100s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ec.enc}{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ts1.enc}</usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi5.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi9.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr5.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy5.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmb.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmr.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmri.pfb>
+Output written on notes.pdf (24 pages, 997896 bytes).
 PDF statistics:
- 675 PDF objects out of 1000 (max. 8388607)
- 595 compressed objects within 6 object streams
- 254 named destinations out of 1000 (max. 500000)
- 358 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 794 PDF objects out of 1000 (max. 8388607)
+ 700 compressed objects within 7 object streams
+ 312 named destinations out of 1000 (max. 500000)
+ 421 words of extra memory for PDF output out of 10000 (max. 10000000)
 

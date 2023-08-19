@@ -578,5 +578,208 @@ The inner join has the same functionality as
 \end{align*}
 Explicitly using "Join" makes formatting more readable. Using 'ON' separates clauses that deal with sources of data i.e., belonging to FROM away from CLAUSES that deal with selection criteria
 \subsection{OUTER JOIN}
-Inner joins can "lose" information, become a tuple that doesn't join with any other relation disappears. Instead, outer join keeps this information and fills tuples that do not match with nulls if it is not matched when joining. You can further specify if you want to keep information on the left side or the right side, more specifically if you wanna keep information on the left table, then you type LEFT OUTER JOIN. You can further use the syntax $NATURAL$ to make the join natural, or use $ON$ syntax after the OUTER JOIN to specify when to join.
+Inner joins can "lose" information, become a tuple that doesn't join with any other relation disappears. Instead, outer join keeps this information and fills tuples that do not match with nulls if it is not matched when joining. You can further specify if you want to keep information on the left side or the right side, more specifically if you wanna keep information on the left table, then you type LEFT OUTER JOIN. You can further use the syntax $NATURAL$ to make the join natural, or use $ON$ syntax after the OUTER JOIN to specify when to join. \\
+SO in outer joins, some tuples that do not "join" are kept. There are variations though
+\begin{itemize}
+	\item Left outer join - keep only dangling tuples from the left
+	\item Right outer join - keep only dangling tuples from the right
+\end{itemize}
+For pairs that are not matched, depending on the type of outer join, the new columns are filled with NULL. 
+\begin{align*}
+	\text{SELECT }<\text{attList}>\text{ FROM }<\text{table1}> \text{[LEFT|RIGHT] OUTER JOIN }<\text{table2}> \\ \text{ ON }<\text{table1.attName1}>=<\text{table2.attName2>;}
+\end{align*}
+You can also do a FULL outer join that would do both left and right. One can also make it a NATURAL join by adding the NATURAL word before the LEFT/RIGHT OUTER JOIN syntax. 
+\section{Subquery}
+\subsection{Definition}
+A subquery (inner query) is a parenthesised query statement following the SELECT-FROM-WHERE template and is contained in another outer query. 
+\subsection{Scalar Subquery}
+You can use a subquery as a value if the result is a tuple of a single attribute. Consider the scoping rule, where an attribute refers to the most closely nested relation with that attribute.
+\subsection{ANY operator}
+the ANY(<relation>) is true if and only if it equals at least one tuple in the relation
+\section{Relational Algebra}
+\subsection{Definition}
+Relational algebra formally defines operations on relations. 
+\begin{tcolorbox}[colback=black!3!white,colframe=black!60!white,title=\begin{defn}Projection \label{Projection}\end{defn}]
+Projection is a unary operator and correspond to SELECT A in SQL, ie.,
+\begin{align}
+\pi_A
+\end{align}
+The $\pi$ is usually followed an attribute list, for example
+\begin{align}
+	\pi_{\text{Lname,Fname,Salary}}(\text{EMPLOYEE})
+\end{align}
+Note that because this is set notation, duplicate values will be removed. Furthermore, it is illegal to project new attributes from smaller projections.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=black!3!white,colframe=black!60!white,title=\begin{defn}Selection \label{Selection}\end{defn}]
+Contrary to the name, the selection in relational algebra denotes there WHERE clause in SQL. It defines the tuple of interest using a constraint $c$.
+\begin{align}
+\sigma_c
+\end{align}
+ The comparison operator is one of $=,\le ,<,\ge ,>,\neq $
+ For example,
+ \begin{align}
+ 	\sigma_{\text{Dno}=4\text{ AND } \text{Salary}>250000}(\text{EMPLOYEE})
+ \end{align}
+ It has commutative properties, i.e., you can interchange where $\sigma$ locate between each other and you can sequence it which is equal to the AND. 
+\end{tcolorbox}
+\begin{tcolorbox}[colback=black!3!white,colframe=black!60!white,title=\begin{defn}Product \label{Product}\end{defn}]
+Product is a binary operator and it calculates the Cartesian product i.e.,
+\begin{align}
+R \times S
+\end{align}
+The result of the two is
+\begin{align}
+	Q(A_1,\ldots,A_m,B_1,\ldots,B_n)
+\end{align}
+such that each tuple in $Q$ is a combination of an $m$-tuple from $R$ and $n$-tuple from $S$.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=black!3!white,colframe=black!60!white,title=\begin{defn}Join \label{Join}\end{defn}]
+The join operator corresponds to JOIN in SQL. It is denoted by
+\begin{align}
+R \bowtie S
+\end{align}
+We can also set the join condition by
+\begin{align}
+	R \bowtie_{\text{join condition}} S
+\end{align}
+For example, you can state the join condition as $\text{SSN}=\text{ESSN}$, and this is called an equijoin.
+\begin{align}
+	R * S	
+\end{align}
+Is the natural join of $R$ and $S$ if they have a common attribute.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=black!3!white,colframe=black!60!white,title=\begin{defn}Set Operators \label{Set Operators}\end{defn}]
+The usual set operators $\cup , \cap , - $ all correspond to union, intersect and except respectively
+\end{tcolorbox}
+\begin{tcolorbox}[colback=black!3!white,colframe=black!60!white,title=\begin{defn}Renaming \label{Renaming}\end{defn}]
+To rename a relation or an attribute we use the
+\begin{align}
+\rho
+\end{align}
+operator.
+\begin{align}
+	\rho_S(R) & \text{ $S$ is new relation name}\\
+	\rho_{(B_1,\ldots,B_n)}(R) & \text{ $B_i$ are the new attribute names}\\
+	\rho_{S(B_1,\ldots,B_n)}(R) & \text{ Renaming both relation and attributes}
+\end{align}
+\end{tcolorbox}
+Throughout the rest of this section, we will use the following database
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{fig.png}
+	\caption{Database}
+	\label{fig:fig-png}
+\end{figure}
+\begin{tcolorbox}[colback=black!3!white,colframe=black!60!white,title=\begin{defn}Compatability \label{Compatability}\end{defn}]
+Two relations $R(A_1,\ldots,A_n)$ and $S(B_1,\ldots,B_n)$ are type-compatible if $m=n$ and $dom(A_i) = dom(B_i)$ for  $1\le i\le n$. It is required that for set operations, that they are type compatible. 
+\end{tcolorbox}
+\begin{tcolorbox}[colback=black!3!white,colframe=black!60!white,title=\begin{defn}Completeness \label{Completeness}\end{defn}]
+For expressively, we need not consider all of the operations. Some are included for convenience or brevity. For example, the set
+\begin{align}
+\{\sigma,\pi,\rho,\cup ,-,\times \}
+\end{align}
+\end{tcolorbox}
+\begin{tcolorbox}[colback=black!3!white,colframe=black!60!white,title=\begin{defn}Division \label{Division}\end{defn}]
+For some relations $R$, $S$ and $T$ that hold
+\begin{align}
+	T \times S = R
+\end{align}
+We have
+\begin{align}
+	R \div S = T \\
+	R \div T = S
+\end{align}
+Note that if $R$ has extra few tuples, then division is still impossible, but we just ignore those.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=black!3!white,colframe=black!60!white,title=\begin{defn}Aggregate Function \label{Aggregate Function}\end{defn}]
+Group tuples by values of some attributes and apply functions separately to each group
+\begin{align}
+{}_{\text{grouping attributes}}\mathfrak{J}_{\text{function list}}(R)
+\end{align}
+Where function is typically one of SUM, AVERAGE, MAXIMUM, MINIMUM, COUNT;
+\end{tcolorbox}
+\section{Guidelines for Data}
+\begin{itemize}
+	\item Guideline 1: Easy to Understand i.e., each tuple in a relation should represent one entity or relationship instance. Only refer to different entities with foreign keys.
+	\item Guideline 2: Remove redundancy i.e., no point in storing the same name twice when we could just refer to it with a foreign key. There are consistency costs and potential anomalies caused with redundancy.
+	\item Guideline 3: No NULLs. NULL values are harmful and should be avoided. They complicate the semantics of joins, selections and aggregation.
+	\item Guideline 4: No spurious tuples. I.e., after decomposing a table in order to get rid of redundancy, we do not obtain any tuples that were not a part of our original table.
+\end{itemize}
+Function dependencies are constraints that are derived from the meaning and interrelationships of the data attributes of a relation schema $R$.
+\subsection{Implied Functional Dependencies}
+Given a relation schema $R$, the closure (cover) $F^{+}$ of a set of FDs,  $F$ : $F^{+}$ represents the set of all implied FDs from $F$. The implied functional dependencies are derived using the following properties:
+\begin{tcolorbox}[colback=black!3!white,colframe=black!60!white,title=\begin{defn}Armstrong Axioms \label{Armstrong Axioms}\end{defn}]
+\begin{enumerate}
+	\item Reflexive. If $Y \subseteq X$, then $X\to Y$ (called trivial FD)
+	\item Augmentation. If $X\to Y$, then $XZ \to YZ$ 
+	\item Transitive. If  $X\to Y$ and $Y\to Z$ then $X\to Z$
+\end{enumerate}
+\end{tcolorbox}
+\subsection{Decomposition Test}
+In general: given $R$ and set of FDs $F$ :
+$R_1,R_2$ is a lossless decomposition of $R$ in $F$ if and only if:
+\begin{itemize}
+	\item $R_1 \cap R_2 \to (R_1-R_2)$ 
+	\item Or
+	\item $R_1 \cap R_2 \to (R_2-R_1)$
+\end{itemize}
+Exist in $F^{+}$. \\
+Furthermore, it is nice but hard to achieve dependency preservation. 
+\subsection{Normalisation}
+\begin{tcolorbox}[colback=black!3!white,colframe=black!60!white,title=\begin{defn}First Normal Form \label{First Normal Form}\end{defn}]
+All attributes are atomic. They have no repeating groups and attributes can not have a substructure. Formally, the domains of attributes must be atomic. Finally, there is a key defined.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=black!3!white,colframe=black!60!white,title=\begin{defn}Second Normal Form \label{Second Normal Form}\end{defn}]
+A relation is said to be 2NF if it is in 1NF and every non-key attribute is fully functionally dependent on any key and is irreducible
+\end{tcolorbox}
+\begin{tcolorbox}[colback=black!3!white,colframe=black!60!white,title=\begin{defn}Third Normal Form \label{Third Normal Form}\end{defn}]
+A relation is said to be in 3NF if it is in 2NF and no transitive functional dependency from a key to a non-key attribute
+\end{tcolorbox}
+\begin{tcolorbox}[colback=black!3!white,colframe=black!60!white,title=\begin{defn}Boyce-Codd Normal Form \label{Boyce-Codd Normal Form}\end{defn}]
+A relation schema $R$ is in Boyce-Codd Normal Form if whenever an FD $X\to A$ holds in $R$, then $X$ is a superkey. A 3NF relation is not in BCNF if
+\begin{itemize}
+	\item There is a determinant that is NOT a superkey in a non-trivial FD
+	\item 3NF is required that non-key attributes need to be determined only by the key
+	\item BCNF requires additionally that the RHS of an FD must not be a prime (key) attribute unless FD is trivial
+\end{itemize}
+In other words, the only arrows are "out of superkeys"
+\end{tcolorbox}
+\section{Database Security}
+DBMS includes a database security and authorisation subsystem. Two types of database security mechanisms exist:
+\begin{itemize}
+	\item Discretionary security mechanisms - Grant or revoke access privileges
+	\item Mandatory security mechanisms - Enforce classification levels for users and data items
+\end{itemize}
+\begin{tcolorbox}[colback=black!3!white,colframe=black!60!white,title=\begin{defn}System Log \label{System Log}\end{defn}]
+The system log includes an entry for each operation applied to the database. It is required to recover from transaction failure or system crash. For security purposes we need to trace ID information.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=black!3!white,colframe=black!60!white,title=\begin{defn}Discretionary Access Control \label{Discretionary Access Control}\end{defn}]
+Method: Granting and revoking privileges \\
+Implementation: supporting statements in the query language for DBA and selected users \\
+There are two types of privileges, which is account level and relation level (for a specific table)
+\end{tcolorbox}
+\begin{tcolorbox}[colback=black!3!white,colframe=black!60!white,title=\begin{defn}Access Matrix Model \label{Access Matrix Model}\end{defn}]
+The access matrix model is given by
+\begin{align}
+M(i,j)
+\end{align}
+And it represents the types of privileges that a subject $i$ holds on object $j$.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=black!3!white,colframe=black!60!white,title=\begin{defn}GRANT \label{GRANT}\end{defn}]
+SQL privileges can be granted using the GRANT command. For example,
+\begin{align}
+\text{GRANT SELECT ON table$\_$name TO username;}
+\end{align}
+One may grant: SELECT, UPDATE, DELETE, INSERT. Referencing is also possible to grant. However, if one wants to limit what rows a person can view, we can create a VIEW and grant permissions for that person
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{one.png}
+	\caption{View then GRANT}
+	\label{fig:}
+\end{figure}
+You can revoke grant options, and further, you can give grant option to users to give grant by adding WITH GRANT to the end of the syntax.
+\end{tcolorbox} 
+\begin{tcolorbox}[colback=black!3!white,colframe=black!60!white,title=\begin{defn}Mandatory Access Control \label{Mandatory Access Control}\end{defn}]
+More fine-grained classifications are often required: data and users are classified into security classes. Most commercial DBMS provide discretionary access only. But DBMS vendors release special version of their RDBMSs for government,military and corporate use. 
+\end{tcolorbox}
 \end{document}

@@ -160,7 +160,6 @@ numberstyle = \tiny,
 	\end{enumerate}
 	\begin{thm}
 		$A$ is optimal, that is, largest size $A$ that is compatible.
-		\begin{proof}
 			One way to show that is that the answer $A$ is equal to $O$, the optimal set. However, this idea is not too good since $O$ is not necessarily unique. \\
 			However, there is a work around. It is to show that $|A| \ge |C|$ for any compatible set $C$. To prove this, we use mathematical induction. We show that "$A$ stays ahead of $C$ ". Let $A=\{a_1,a_2,\ldots,a_k\} \subset [m].$ Now let us consider $C = \{c_1,c_2,\ldots,c_m\}$, which is any compatible set. The conclusion is then, for finishing time $f(a_i) \le f(c_i)$ for all $i=1,2,\ldots,m$. We want to prove that $m$ cannot exceed $k$.
 		\end{proof}
@@ -230,7 +229,7 @@ numberstyle = \tiny,
 	\section{Scheduling to minimise lateness}
 	test
 	\begin{lstlisting}[language = pseudocode , caption={The Problem} , frame = trBL , firstnumber = last , escapeinside={(*@}{@*)}]
-	Input: (*@$n$@*) jobs (*@$(t_1,d_1),(t_2,d_2),\ldots,(t_n,d_n)$@*) where (*@$t$@*) is duration and (*@$d$@*) is duration
+	Input: (*@$n$@*) jobs (*@$(t_1,d_1),(t_2,d_2),\ldots,(t_n,d_n)$@*) where (*@$t$@*) is duration and (*@$d$@*) is deadline
 	Output: Permutation (schedule) (*@$j_1,j_2,\ldots,j_n$@*) of (*@$1,2,\ldots,n$@*) that minimizes maximum lateness
 	\end{lstlisting}
 	The lateness $l$ for a job $k$ is calculated by $d_k - f_k$. The maximum lateness would be $max(l_1,l_2,\ldots,l_n)$. We seek to minimise this maximum.
@@ -591,9 +590,9 @@ numberstyle = \tiny,
 			D(i,j) = \begin{cases}
 				j \cdot \delta& \text{if }i=0 \\
 				i \cdot \delta & \text{if }j=0 \\
-				\text{min}\left( \alpha_{x_i,y_j}+D(i-1,j-1) \right) &\text{if }i \ge 1 \land j\ge 1 \\
+				\text{min}\{\alpha_{x_i,y_j}+D(i-1,j-1) &\text{if }i \ge 1 \land j\ge 1 \\
 				\delta + D(i-1,j) & \text{if $x_i$ is aligned with a gap} \\
-				\delta + D(i,j-1) & \text{ if $y_j$ is aligned with a gap}
+				\delta + D(i,j-1)\} & \text{ if $y_j$ is aligned with a gap}
 			\end{cases}
 	\end{align*}
 	It follows that the complexity of the implementation is $O(mn)$. The space complexity is $O(m)$. However, to use linear space, we need to make observations: \\
@@ -684,7 +683,7 @@ numberstyle = \tiny,
 		D(i,v) = \begin{cases}
 		0	& \text{if }i=0, v=t \\
 		+\infty	&\text{if }i=0, v\neq t\\
-		min(D[i-1,v], min_{(v,w) \in E}(c(w) + D(i-1,v)))	&\text{if }i>0 \\
+		\min(D[i-1,v], \min_{(v,w) \in E}(c(w) + D(i-1,w)))	&\text{if }i>0 \\
 		\end{cases}
 	\end{align*}
 	\subsection{Compute}
@@ -767,7 +766,7 @@ We write $X \le_p Y$ if there exists a poly-time reduction from $X$ to $Y$.
 	\end{proof}
 	We can also restate fact 5 by its negation. That is, if $X \not\in P$, then $Y \not\in P$. This means that the same fact shows us that 
 	\begin{align*}
-		\underbrace{X}_{\text{no harder than $X$ }} \le_p \underbrace{Y}_{\text{no easier computationally than $X$}}
+		\underbrace{X}_{\text{no harder than $Y$ }} \le_p \underbrace{Y}_{\text{no easier computationally than $X$}}
 	\end{align*}
 	\section{Independent Set}
 	\begin{lstlisting}[language = psuedocode , caption={Algorithm} , frame = trBL , firstnumber = last , escapeinside={(*@}{@*)}]
@@ -783,7 +782,7 @@ We write $X \le_p Y$ if there exists a poly-time reduction from $X$ to $Y$.
 	Output: Yes if (*@$G$@*) has a vertex cover of size (*@$k$@*), no otherwise
 	\end{lstlisting}	
 	\begin{defn}
-		$S \subseteq V$ is a vertex cover in $G$ if the following condition holds. For all edges $(v,w) \in E$, $v \in S$8 or $w \in S$. Vertices cover edges.
+		$S \subseteq V$ is a vertex cover in $G$ if the following condition holds. For all edges $(v,w) \in E$, $v \in S$ or $w \in S$. Vertices cover edges.
 	\end{defn}
 	Question: Is $\text{Independent Set} \le_p \text{Vertex Covering}$ and $\text{Vertex Covering}\le_p \text{Independent Set}$. To answer, observe that
 	\begin{align*}
@@ -817,7 +816,7 @@ We write $X \le_p Y$ if there exists a poly-time reduction from $X$ to $Y$.
 		VC \le_p SC
 	\end{align*}
 	\begin{defn}
-		For graph $G = (V,E)$ and $u \in V$, define $I_u = \{v \in V : u \text{ is in pair with } v\}$
+		For graph $G = (V,E)$ and $u \in V$, define $I_u = \{e \in E : u \in e\}$
 	\end{defn}
 	Fact. $C \subset V$ is a vertex cover in $G$ if and only if $C$ is a set cover in $E, T$ 
 	\begin{proof}
@@ -838,7 +837,7 @@ We write $X \le_p Y$ if there exists a poly-time reduction from $X$ to $Y$.
 		Clause is a disjunction of literals, e.g., $l_1 \lor l_2 \lor \ldots \lor l_k$
 	\end{defn}
 	\begin{defn}
-		Disjunction Normal Form is a disjunction of clauses
+		Disjunction Normal Form is a disjunction of conjunctive clauses
 	\end{defn}
 	\subsection{3-SAT}
 	3-SAT is similar to SAT, but we restrict our inputs that in each clause we have at most $3$ literals.
@@ -847,7 +846,242 @@ We write $X \le_p Y$ if there exists a poly-time reduction from $X$ to $Y$.
 		\begin{align*}
 			3-SAT \le_p IS
 		\end{align*}
-		We pick one of the three literals occurrence in that clause and set it to $1$. While we do this we need to ensure that we avoid conflicts. 
+		We pick one of the three literals occurrence in that clause and set it to $1$. While we do this we need to ensure that we avoid conflicts (i.e., we do not pick both literals $x$ and $\neg x$ in different clauses)
+	\end{thm}
+	\begin{exmp}
+		Consider the expression
+		\begin{align*}
+			\phi = (\neg x_1 \lor x_2 \lor x_3) \land (\neg x_2 \lor x_1 \lor x_3) \land (\neg x_1 \lor x_2 \lor x_4)
+		\end{align*}
+		\begin{enumerate}
+			\item We pick the occurrences $\neg x_1, x_3, \neg x_1$ 
+			\item Note that there are no conflicts picked
+		\end{enumerate}
+		Therefore settings our picked occurrences to $1$ will satisfy our SAT. We will now create a graph $G_\phi$ using the following definition:
+		\begin{defn}
+			$G_\phi$. The vertices of a graph will correspond to all literal occurrences found in $\phi$. Edges will be defined in two types: Triangle edges and conflict edges. The former, for each clause we connect all $3$ pairs of literal occurrences in that clause. The latter connects all pairs of opposite literal occurrences. 
+		\end{defn}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.8\textwidth]{one.png}
+			\caption{Graph G phi}
+			\label{fig:one-png}
+		\end{figure}
+		Note that we can not pick $2$ vertices from a single triangle. We can only pick $1$ vertex from each triangle. We need to ensure that there are no conflict edges between for the picked vertices. 
+	\end{exmp}
+	\begin{proof}
+		Poly-time reduction from $3$-SAT to Independent set. Consider $A(\phi)$ output $I-S(G_\phi,k)$ where $\phi$ is of $k$ clauses. It is poly-time because it is routine to construct $G_\phi$ in poly time. \\
+		Correctness: $\phi$ is satisfiable if and only if $G_\phi$ has an independent set of size $ k$. \\
+		Suppose $X \to \{0,1\}$ satisfies $\phi$. Each clause $i$ has an occurrence of some literal $l_i$ such that $v(l_i) = 1$. For each clause $i$, let $w_i$ be the vertex in $G_\phi$ that corresponds to the literal occurrence in clause $i$. The set $\{w_1,w_2,\ldots,w_k\}$ is an independent set in $G_\phi$ because for all $i \neq j$, $v(l_i) = v(l_j) = 1$ therefore $l_i$ and $l_j$ are not opposite literals so $\{w_i,w_j\}$ is not a conflict edge. \\
+		For the second implication, let $\{w_1,w_2,\ldots,w_k\}$ be an independent set in $G_\phi$ where $w_i$ is from $i$-th triangle. The corresponding literal occurrences are in distinct clauses. Let $l_i$ be the literal in the $i$-th clause. We define truth assignment $v:X \to \{1,0\}$ by setting $v(l_1)=v(l_2)=v(l_3) = 1$. $v$ is well defined, because for all $i \neq j$ therefore $\{w_i,w_j\}$ is not a conflcit edge $l_i$ and $l_j$ are not opposites. $\phi$ is satisfied by $v$, because every clause literal is $1$.
+	\end{proof}
+	\section{Certification and NP}
+	\begin{defn}
+		If $X$ is an algorithmic decision problem (ADP), let $x$ be an instance of $X$. We write $x \in X$ as shorthand for the statement that $x$ is a YES instance of $X$. Let $A(x)$ be a poly-time algorithm for an algorithmic decision problem $X$ if there is a polynomial $q(n)$ such that its running time is bounded by $q(|x|)$ where $|x|$ is number of bits. $x \in X$ iff $A(x) =$ YES. 
+	\end{defn}
+	\begin{align*}
+		P \eqdef \{ X \in ADP : \text{ there is a poly-time algorithm} \}
+	\end{align*}
+	All the problems we covered thus far, there was no poly-time algorithm discovered to solve them efficiently. No one knows how to prove that no poly-time algorithm exists. For all YES instances, there is a short (POLY-SIZED) solution that can be checked (certified) in polynomial time. 
+	\begin{defn}
+		A certifier for a ADP $X$ is a algorithm $A(x,c)$ where $x$ is an instance and $c$ is a certificate such that $x$ is a YES instance iff there exists a string $c$ such that $A(x,c) = $ YES. The poly-time version of this definition requires an additional condition: there is a polynomial $p$ such that $x$ is a YES instance there exists a string $|c| < p(|x|)$.
+	\end{defn}
+	\begin{exmp}
+		3-SAT certifier. The certified cert-$3$-SAT$(p,v)$ where $p$ is the instance $v$ is the certificate. The output is YES if $\phi$ evaluates to  $1$ for truth asignment $v$. Output NO otherwise.  \\
+		It takes poly-time to evaluate $\phi$ for $v$. \\
+		Correctness. If $\phi \in 3$-SAT, then there is vars of $\phi \to (0,1)$ such that $v(\phi) = 1$. If $\phi$ is not in $3$-SAT, then for all truth assignments variables of $\phi$ we have $v(\phi) = 0$. 
+	\end{exmp}
+	\begin{exmp}
+		Certifier of Independent Set. $Cert-I-S((G,k),S)$ where $S$ is a set of vertices. The certifier will output YES if $S$ has size $k$ and $S$ is an independent set in $G$. NO otherwise. \\
+		We first need to ensure it can be CONVINCED - outputs a YES when it's a YES. \\
+		The certificate CANNOT BE FOOLED into answering YES for a NO instance
+	\end{exmp}
+	\begin{align*}
+		NP \eqdef \{ X \in ADP : \text{ there is a poly-time certifier for }X\}
+	\end{align*}
+	\begin{thm}
+		$P \subseteq NP$
+	\begin{proof}
+		Let $X \in P$, meaning that $A(x)$ for solving instances of $X$ in poly-time. Then the following $A$-cert$(x,c)$: output $A(x)$ is a correct poly-time certifier for $X$.
+	\end{proof}
+	\end{thm}
+	\begin{defn}
+		A ADP $X$ is NP-Complete if
+		\begin{enumerate}
+			\item $X \in NP$ 
+			\item $\forall Y \in NP$, we have $Y \le_p X$
+		\end{enumerate}
+	\end{defn}
+	\begin{cor}
+		For every NP-complete ADP $X$ :
+		\begin{align*}
+			X \in P \iff P = NP
+		\end{align*}
+	\end{cor}
+	\begin{thm}
+		CircuitSAT is NP-Complete. In CircuitSAT the inputs are Boolean Circuits. The output is YES iff there is a truth assignment to none-fixed circuit input such that the circuit evaluates to $1$. 
+	\end{thm}
+	Fact. Suppose $Z$ is NP-Complete, then any problem $X$ is NP-Complete if $X \in NP$ and $Z \le_p X$
+	\begin{thm}
+		$3$-SAT is NP-Complete.
+		\begin{proof}
+			We have designed a certifier for $3$-SAT therefore we know it is NP-easy. To show that it is NP-hard, we consider
+			\begin{align*}
+				CircuitSAT \le_p 3-SAT
+			\end{align*}
+			We construct a CNF $\phi$ such that the circuit $k$ is satisfiable if and only if our CNF $\phi$ is satisfiable. 
+		\end{proof}
+	\end{thm}
+	\begin{cor}
+		Independent Set, Set Cover, Vertex Cover are all NP-Complete. 
+	\end{cor}
+	\section{Network Flow}
+	\begin{defn}
+		Matching. $M \subseteq E$ is a MATCHING in graph $G=(V,E)$ if $\forall e,f \in E$ where $e \neq f$ we have $e \cap f = \varnothing$
+	\end{defn}
+	\begin{defn}
+		A graph $G=(V,E)$ is bipartite if
+		\begin{enumerate}
+			\item $V = L \cup R$ such that $L \cap R = \varnothing$
+			\item $\forall e \in E$ such that $e \cap R \neq \varnothing$ and $e \cap L \neq \varnothing$
+		\end{enumerate}
+	\end{defn}
+	\begin{defn}
+		Flow Network is a directed graph $G$ with two distinguished vertices $S$ (source) and $T$ (sink) and edge capacities $c : E \to \mathbb{Z}$. Flow networks model transportation networks. I.e., $S$ is where the traffic is given and $T$ is where the traffic is supposed to get to.
+	\end{defn}
+	\begin{defn}
+		Flow is a function $f : E \to \mathbb{R}^{+}$. It must, however, abide the capacity constraint. I.e., $\forall  e \in E$, $0 \le f(e) \le c(e)$. Furthermore, for every $ v \in V - \{S,T\}$ it must be that $v_{in}=v_{out}$
+	\end{defn}
+	\begin{defn}
+		\begin{align*}
+			val(f) \eqdef f^{out}(S)
+		\end{align*}
+	\end{defn}
+	\subsection{Max Flow}
+	Inputs: Flow networks $G=(V,E,s,t,c)$ \\
+	Output: Flow $f : E \to \mathbb{R}^{+}$ of maximum value.\\
+	\begin{defn}
+		Residual graph $G_f$ of flow $f$ in network $G=(V,E,s,t,c)$ is a graph of vertices $V$ and two types of edges:
+		\begin{enumerate}
+			\item $\forall e \in E$ s.t. $f(e) < c(e)$ we have the forward edge $e $ with residual capacity $c_f(e) = c(e) - f(e)$. 
+			\item $\forall  e = (v,w) \in E$ such that $f(e) > 0$ the backwards edge  $e'=(w,v)$ has residual capacity $c_f(e') = f(e) > 0$
+		\end{enumerate}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.6\textwidth]{two.png}
+			\caption{Graph $G_f$}
+			\label{fig:two-png}
+		\end{figure}
+	\end{defn}
+	\begin{defn}
+		\begin{align*}
+			\text{Bottleneck}(P,f) \eqdef \text{Min residual capacity of edges in path $P$ in $G_f$}
+		\end{align*}
+	\end{defn}
+	\begin{defn}
+		\begin{align*}
+			\text{Augment}(f,P)
+		\end{align*}
+		\begin{lstlisting}[language = pseudo , caption={Augment} , frame = trBL , firstnumber = last , escapeinside={(*@}{@*)}]
+		B (*@$\leftarrow$@*) Bottleneck(P,f)
+		for (*@$e \in P$@*) do 
+			if (*@$e$@*) is a forward edge
+				(*@$f(e) \leftarrow f(e) + B$@*)
+			if (*@$e$@*) is a backward edge
+				(*@$ f(\overleftarrow{e}) \leftarrow \overleftarrow{e} - B$@*)
+		output((*@$f$@*))
+		\end{lstlisting}
+		where if $e = (v,w)$ then $\overleftarrow{e} = (w,v)$
+	\end{defn}
+	Fact. If $f$ is a flow in $G$ and $P$ is a $s-t$ path in $G_f$ ("an augmenting path") then $f'=Augment(f,P)$ is a flow in $G$ and $val(f') = val(f) + B$ \\
+	\subsection{Ford-Fulkerson}
+	Input $((V,E),s,t,c : E \to \mathbb{Z})$\\
+	Initialise $f(e) = 0$ for all $e \in E$. \\
+	while there is an $s-t$ path in $G_f$ do\\
+	$f \leftarrow Augment(f,P)$ \\
+	output($f$)		\\		
+	Fact. Integrality Invariant. Throughout $F-F$ the following are integers:
+	\begin{enumerate}
+		\item Flow values $f(e)$ for all $e \in E$ 
+		\item Residual capacities $c_f(e)$ for all $e \in E_f$
+	\end{enumerate}
+	\begin{thm}
+		Suppose all capacities are integers. Then $F-F$ terminates after at most 
+		\begin{align*}
+			C \eqdef \sum_{e \in out(S)}^{} c(e)
+		\end{align*}
+		iterations. Therefore, $F-F$ can be implemented to be run in $O(mC)$ time.
+	\end{thm}
+	\subsection{Max Flows and Min Cuts}
+	\begin{defn}
+		$s-t$ cut. $(A,B)$ is an $s-t$ cut if $A \cup B = V \land A \cap B = \varnothing$. We also $S \in A$ and $T \in B$. The capacity of an $s-t$ cut $(A,B)$ is 
+		\begin{align*}
+			cap(A,B) = \sum_{e \in out(A)}^{} c(e)
+		\end{align*}
+	\end{defn}
+	Fact. Suppose $f$ is a flow and $(A,B)$ is an $s-t$ cut. Then
+	\begin{align*}
+		v(f) &= f^{out}(A) - f^{in}(A) \\
+		     &= \sum_{e \in out(A)}^{} f(e) - \sum_{e\in in(A)}^{} f(e)
+	\end{align*}
+	Note that $(\{s\}, V-\{s\})$ is still an $s-t$ cut. 
+	\begin{cor}
+		Weak Duality. For all flows $f$ and $s-t$ cuts $(A,B):$ 
+		\begin{align*}
+			v(f) \le cap(A,B)
+		\end{align*}
+		\begin{proof}
+			$v(f) = f^{out}(A) - f^{in}(A)$ from fact two. Notice that 
+\begin{align*}
+	v(f) &\le f^{out}(A) \\
+	     &= \sum_{e \in out(A)}^{} f(e) \\
+	& \le  \sum_{e \in out(A)}^{} c(e) \\
+	&= cap(A,B)
+\end{align*}
+		\end{proof}
+	\end{cor}
+		Mincut\\
+		The input is a flow network $((V,E),s,t,c)$ \\
+		The output is an $s-t$ cut of the min capacity. \\
+		\begin{cor}
+			If $val(f) = cap(A,B)$ then by weak duality $f$ is a max value flow and $(A,B)$ is a min capacity $s-t$ cut.
+		\end{cor}
+		Fact.
+		\begin{align*}
+			\text{Max Flow Value } =\text{ Min Cut Cap}
+		\end{align*}
+		This is called the strong duality theorem. 
+		\begin{thm}
+			Augmenting Path Theorem. Flow $f$ has max value if and only if its residual graph $G_f$ has no augmenting path.
+			\begin{proof}
+				We show that there is an $s-t$ cut $(A,B)$ such that its capacity is equal to flow $f$, $f$ is a max value flow, the residual graph has no augmenting paths are all equivalent statements. The first two statements are implied with weak duality. We show that second statement implies third statement. Proof by contrapositive. Assume there is an $s-t$ path in the residual graph called path $P$. We augment that graph to obtain flow  $f'$ we obtain hat $v(f') > v(f)$. We see that the second statement does not hold as $f$ is not a unsure. We show that third statement implies first. Suppose that there is no $s-t$ path in the residual graph. If we define $A$ to be the set of vertices such that there is a path to $v$ from $s$ in the residual graph, then $(A,B)$ is an $s-t$ cut. 
+			\end{proof}`
+		\end{thm}
+		\begin{cor}
+			$F-F$ returns outputs a max value flow. $F-F$ can also output a min-capacity $s-t$ cut with extra $O(n)$ time. 
+		\end{cor}
+		Fact. If all edge capacities are integers, then $F-F$ returns an INTEGRAL FLOW. 
+	\subsection{Max Bipartite Matching}
+	Input: Bipartite graph $G$ \\
+	Output: Maximum size matching in $G$
+	A matching is maximising the amount of nodes are used. To create this, we make a bipartite graph into a flow. We copy all the vertices and edges. We now add a $s$ and a $t$ vertex. The $s $ vertex connects to all $L$ and $t $ connects to all $R$. We make a direction for all vertices from left to right. The capacities are all $1$. \\
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\textwidth]{three.png}
+		\caption{Constructed Flow Network from Bipartite Graph}
+		\label{fig:three-png}
+	\end{figure}
+	Fact. For every matching $m$ in $G$ there is an integral flow $f'_m$ such that $|m| = v(f'_m)$\\
+	Fact. For every integral flow  $f$ in $G$, there is a matching $M_f$ in graph $G$ such that the value of $f = |M_f|$
+	\begin{lstlisting}[language = pseudo , caption={FFMaxMatching} , frame = trBL , firstnumber = last , escapeinside={(*@}{@*)}]
+	Construct flow network (*@$\bar{G}$@*)
+	(*@$f^* \leftarrow FF(\bar{G})$@*)
+	Output (*@$M_{f^*}$@*)
+	\end{lstlisting}
+	If $f^{*}$ is a max value flow of $\bar{G}$ then $M_{f^{*}}$ is a max size matching in $G$. However, the capacity here is bounded by the number of vertices $V$ as capacities are always $1$. Therefore, FFMaxMatching has runtime $O(nm)$
+	\begin{thm}
+		Define $N(A) = \{v \in V : \text{ there is $a \in A$ s.t. $(a,v) \in E$} \}$ \\
+		 Fact. If there is $A \subseteq L$ such that $|N(A)| < A$ then bipartite graph $G = (L \cup R, E) $ does not have a perfect matching. The inverse is also true. This is called Hall's Marriage Problem. If you take a bipartite graph $G$ such that $|L| = |R|$ then $G$ having a perfect matching is equivalent to $\forall A \subseteq L$, we have $|N(A)| \ge |A|$
 	\end{thm}
 \end{document}
 
